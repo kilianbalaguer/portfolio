@@ -7,10 +7,10 @@ import { GrAndroid } from "react-icons/gr";
 import { SiMacos } from "react-icons/si";
 import { FaUserFriends, FaWindows } from "react-icons/fa";
 import { SiXcode } from "react-icons/si";
-import ScribblelabImg from "@/public/Scribblelab.png";
+import notiqImg from "@/public/Notiq.png";
 import permissionmasterImg from "@/public/permissionmaster.png";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import areobrowserImg from "@/public/AeroBrowser.png";
 export const links = [
   {
     name: "Home",
@@ -77,28 +77,28 @@ export const projectsData = [
   {
     id: "notiq",
     tags: ["React", "Next.js", "TypeScript", "SwiftUI"],
-    imageUrl: ScribblelabImg,
+    imageUrl: notiqImg,
     githubUrl: "https://github.com/NotiqTeam/NotiqApp",
     liveUrl: "coming-soon",
   },
   {
     id: "studyhub",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Firebase"],
-    imageUrl: rmtdevImg,
+    imageUrl: "coming-soon",
     githubUrl: "coming-soon",
     liveUrl: "coming-soon",
   },
   {
     id: "aerobrowser",
     tags: ["Swift", "SwiftUI", "macOS", "iOS"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: areobrowserImg,
     githubUrl: "https://github.com/AeroBrowser-Official/AeroBrowser",
     liveUrl: "coming-soon",
   },
   {
     id: "codeconnect",
     tags: ["React", "Node.js", "MongoDB", "WebSocket"],
-    imageUrl: permissionmasterImg,
+    imageUrl: "coming-soon",
     githubUrl: "coming-soon",
     liveUrl: "coming-soon",
   },
