@@ -36,13 +36,19 @@ export default function Projects() {
               className="group relative border-2 border-black dark:border-white hover:translate-x-1 hover:translate-y-1 transition-transform"
             >
               <div className="relative overflow-hidden aspect-video bg-gray-100 dark:bg-gray-900 transition-all duration-300">
-                <Image
-                  src={project.imageUrl}
-                  alt={content.title}
-                  quality={95}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
+                      {project.imageUrl === "coming-soon" ? (
+                        <div className="w-full h-full flex items-center justify-center text-gray-600 dark:text-gray-300 bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-900 dark:to-gray-800">
+                          <span className="text-xl font-bold uppercase tracking-wide">{t.comingSoon}</span>
+                        </div>
+                      ) : (
+                        <Image
+                          src={project.imageUrl}
+                          alt={content.title}
+                          quality={95}
+                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                        />
+                      )}
+                    </div>
               
               <div className="p-6 bg-white dark:bg-black transition-all duration-300">
                 <h3 className="text-2xl font-black mb-2">
