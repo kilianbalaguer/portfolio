@@ -76,14 +76,14 @@ export const experiencesData = [
 export const projectsData = [
   {
     id: "notiq",
-    tags: ["React", "Next.js", "TypeScript", "SwiftUI"],
+    tags: ["Swift", "SwiftUI", "macOS", "iOS"],
     imageUrl: notiqImg,
     githubUrl: "https://github.com/NotiqTeam/NotiqApp",
     liveUrl: "coming-soon",
   },
   {
     id: "studyhub",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "Firebase"],
+    tags: ["Swift", "SwiftUI", "macOS", "iOS", "Android", "Windows", "NextJS", "Kotlin", "C++", "C" ],
     imageUrl: studyhubImg,
     githubUrl: "coming-soon",
     liveUrl: "coming-soon",
@@ -97,7 +97,7 @@ export const projectsData = [
   },
   {
     id: "codeconnect",
-    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
+    tags: ["Swift", "SwiftUI", "macOS", "iOS", "Android", "Windows", "NextJS", "Kotlin", "C++", "C" ],
     imageUrl: "coming-soon",
     githubUrl: "coming-soon",
     liveUrl: "coming-soon",
