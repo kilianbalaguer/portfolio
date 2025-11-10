@@ -18,7 +18,7 @@ export const translations = {
     
     // About
     aboutTitle: "About Me",
-  aboutP1: "Hey! I'm Kilian, a 15-year-old developer from Belgium. I started coding when I was 10, so I've been coding for 5 years. I love building apps, games, and websites that solve real problems.",
+  aboutP1: "Hey! I'm Kilian, a 15-year-old developer from Belgium. I started coding when I was 11, so I've been coding for 4 years. I love building apps, games, and websites that solve real problems.",
     aboutP2: "When I'm not coding, you'll find me making music. I play piano, guitar, bass, drums, and I produce my own tracks. Music and code share something special - they're both about creating something from nothing.",
     aboutP3: "I also love cooking and experimenting in the kitchen. Whether it's code, music, or food, I'm always learning and creating something new.",
     aboutMusic: "MUSIC",
@@ -76,7 +76,7 @@ export const translations = {
     
     // About
     aboutTitle: "À propos de moi",
-  aboutP1: "Salut ! Je suis Kilian, un développeur de 15 ans de Belgique. J'ai commencé à coder à 10 ans, donc je code depuis 5 ans. J'adore créer des applications, des jeux et des sites qui résolvent de vrais problèmes.",
+  aboutP1: "Salut ! Je suis Kilian, un développeur de 15 ans de Belgique. J'ai commencé à coder à 11 ans, donc je code depuis 4 ans. J'adore créer des applications, des jeux et des sites qui résolvent de vrais problèmes.",
     aboutP2: "Quand je ne code pas, je fais de la musique. Je joue du piano, de la guitare, de la basse, de la batterie, et je produis mes propres morceaux. La musique et le code partagent quelque chose de spécial - ils consistent tous deux à créer quelque chose à partir de rien.",
     aboutP3: "J'aime aussi cuisiner et expérimenter en cuisine. Que ce soit le code, la musique ou la cuisine, j'apprends toujours et je crée quelque chose de nouveau.",
     aboutMusic: "MUSIQUE",
@@ -134,7 +134,7 @@ export const translations = {
     
     // About
     aboutTitle: "نبذة عني",
-  aboutP1: "مرحباً! أنا كيليان، مطور يبلغ من العمر 15 عامًا من بلجيكا. بدأت البرمجة عندما كان عمري 10 سنوات، لذلك أعمل في البرمجة منذ 5 سنوات. أحب بناء التطبيقات والألعاب والمواقع التي تحل مشاكل حقيقية.",
+  aboutP1: "مرحباً! أنا كيليان، مطور يبلغ من العمر 15 عامًا من بلجيكا. بدأت البرمجة عندما كان عمري 11 سنوات، لذلك أعمل في البرمجة منذ 4 سنوات. أحب بناء التطبيقات والألعاب والمواقع التي تحل مشاكل حقيقية.",
     aboutP2: "عندما لا أكون أبرمج، ستجدني أصنع الموسيقى. أعزف على البيانو والجيتار والباس والطبول، وأنتج مقطوعاتي الخاصة. تشترك الموسيقى والبرمجة في شيء خاص - كلاهما يتعلق بإنشاء شيء من لا شيء.",
     aboutP3: "أحب أيضًا الطبخ والتجريب في المطبخ. سواء كان ذلك برمجة أو موسيقى أو طعام، فأنا دائمًا أتعلم وأخلق شيئًا جديدًا.",
     aboutMusic: "الموسيقى",
@@ -192,7 +192,7 @@ export const translations = {
     
     // About
     aboutTitle: "Over Mij",
-  aboutP1: "Hey! Ik ben Kilian, een 15-jarige ontwikkelaar uit België. Ik begon met coderen toen ik 10 was, dus ik codeer al 5 jaar. Ik bouw graag apps, games en websites die echte problemen oplossen.",
+  aboutP1: "Hey! Ik ben Kilian, een 15-jarige ontwikkelaar uit België. Ik begon met coderen toen ik 11 was, dus ik codeer al 4 jaar. Ik bouw graag apps, games en websites die echte problemen oplossen.",
     aboutP2: "Als ik niet aan het coderen ben, maak ik muziek. Ik speel piano, gitaar, bas, drums, en ik produceer mijn eigen tracks. Muziek en code delen iets speciaals - beide gaan over het creëren van iets uit niets.",
     aboutP3: "Ik hou ook van koken en experimenteren in de keuken. Of het nu code, muziek of eten is, ik ben altijd aan het leren en iets nieuws aan het maken.",
     aboutMusic: "MUZIEK",
@@ -250,7 +250,7 @@ export const translations = {
     
     // About
     aboutTitle: "Über Mich",
-  aboutP1: "Hey! Ich bin Kilian, ein 15-jähriger Entwickler aus Belgien. Ich habe mit 10 Jahren angefangen zu programmieren, also programmiere ich seit 5 Jahren. Ich liebe es, Apps, Spiele und Websites zu bauen, die echte Probleme lösen.",
+  aboutP1: "Hey! Ich bin Kilian, ein 15-jähriger Entwickler aus Belgien. Ich habe mit 11 Jahren angefangen zu programmieren, also programmiere ich seit 4 Jahren. Ich liebe es, Apps, Spiele und Websites zu bauen, die echte Probleme lösen.",
     aboutP2: "Wenn ich nicht am Programmieren bin, mache ich Musik. Ich spiele Klavier, Gitarre, Bass, Schlagzeug und produziere meine eigenen Tracks. Musik und Code teilen etwas Besonderes - beide geht es darum, etwas aus dem Nichts zu erschaffen.",
     aboutP3: "Ich liebe auch das Kochen und Experimentieren in der Küche. Ob Code, Musik oder Essen, ich lerne immer und erschaffe etwas Neues.",
     aboutMusic: "MUSIK",
@@ -308,7 +308,7 @@ export const translations = {
     
     // About
     aboutTitle: "Acerca de Mí",
-  aboutP1: "¡Hola! Soy Kilian, un desarrollador de 15 años de Bélgica. Empecé a programar cuando tenía 10 años, así que llevo 5 años programando. Me encanta crear aplicaciones, juegos y sitios web que resuelven problemas reales.",
+  aboutP1: "¡Hola! Soy Kilian, un desarrollador de 15 años de Bélgica. Empecé a programar cuando tenía 11 años, así que llevo 4 años programando. Me encanta crear aplicaciones, juegos y sitios web que resuelven problemas reales.",
     aboutP2: "Cuando no estoy programando, estoy haciendo música. Toco piano, guitarra, bajo, batería y produzco mis propias pistas. La música y el código comparten algo especial: ambos tratan de crear algo de la nada.",
     aboutP3: "También me encanta cocinar y experimentar en la cocina. Ya sea código, música o comida, siempre estoy aprendiendo y creando algo nuevo.",
     aboutMusic: "MÚSICA",
@@ -366,7 +366,7 @@ export const translations = {
     
     // About
     aboutTitle: "소개",
-  aboutP1: "안녕하세요! 저는 벨기에에서 온 15세 개발자 킬리안입니다. 10살 때 코딩을 시작했고, 그래서 5년 동안 코딩해왔습니다. 실제 문제를 해결하는 앱, 게임, 웹사이트를 만드는 것을 좋아합니다.",
+  aboutP1: "안녕하세요! 저는 벨기에에서 온 15세 개발자 킬리안입니다. 11살 때 코딩을 시작했고, 그래서 4년 동안 코딩해왔습니다. 실제 문제를 해결하는 앱, 게임, 웹사이트를 만드는 것을 좋아합니다.",
     aboutP2: "코딩하지 않을 때는 음악을 만듭니다. 피아노, 기타, 베이스, 드럼을 연주하고 제 트랙을 프로듀싱합니다. 음악과 코드는 특별한 공통점이 있습니다 - 둘 다 무에서 유를 창조하는 것입니다.",
     aboutP3: "요리하고 주방에서 실험하는 것도 좋아합니다. 코드든, 음악이든, 음식이든, 저는 항상 배우고 새로운 것을 만들고 있습니다.",
     aboutMusic: "음악",

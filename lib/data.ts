@@ -8,7 +8,7 @@ import { SiMacos } from "react-icons/si";
 import { FaUserFriends, FaWindows } from "react-icons/fa";
 import { SiXcode } from "react-icons/si";
 import notiqImg from "@/public/Notiq.png";
-import permissionmasterImg from "@/public/permissionmaster.png";
+import studyhubImg from "@/public/StudyHub.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import areobrowserImg from "@/public/AeroBrowser.png";
 export const links = [
@@ -84,7 +84,7 @@ export const projectsData = [
   {
     id: "studyhub",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Firebase"],
-    imageUrl: "coming-soon",
+    imageUrl: studyhubImg,
     githubUrl: "coming-soon",
     liveUrl: "coming-soon",
   },
