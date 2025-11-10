@@ -23,9 +23,17 @@ export default function LanguageSwitch() {
   return (
     <div className="relative">
       <button
-        className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-black border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all font-medium"
-        onClick={() => setIsOpen(!isOpen)}
+        className={`flex items-center gap-2 px-3 py-2 border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all font-medium touch-manipulation ${
+          isOpen 
+            ? "bg-black dark:bg-white text-white dark:text-black" 
+            : "bg-white dark:bg-black"
+        }`}
+        onClick={(e) => {
+          setIsOpen(!isOpen);
+          e.currentTarget.blur();
+        }}
         aria-label="Select language"
+        aria-expanded={isOpen}
       >
         <span className="text-lg">{currentLanguage?.flag}</span>
         <span className="hidden sm:inline text-xs font-mono tracking-wider">
@@ -47,11 +55,12 @@ export default function LanguageSwitch() {
             {languages.map((lang, index) => (
               <button
                 key={lang.code}
-                onClick={() => {
+                onClick={(e) => {
                   setLanguage(lang.code);
                   setIsOpen(false);
+                  e.currentTarget.blur();
                 }}
-                className={`w-full px-4 py-3 text-left flex items-center gap-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors font-medium ${
+                className={`w-full px-4 py-3 text-left flex items-center gap-3 md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:brightness-90 transition-colors font-medium touch-manipulation ${
                   language === lang.code
                     ? "bg-black dark:bg-white text-white dark:text-black"
                     : "text-gray-700 dark:text-gray-300"

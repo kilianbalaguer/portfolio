@@ -33,7 +33,7 @@ export default function Intro() {
           <div className="inline-block mb-4 px-4 py-1 bg-black dark:bg-white text-white dark:text-black text-sm font-mono transition-all duration-300">
             {t.introBadge}
           </div>
-          <h1 className="text-6xl sm:text-7xl font-black mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
             {t.introTitle.split(' ')[0]}<br />
             <span className="italic">{t.introTitle.split(' ')[1]}</span>
           </h1>
@@ -44,7 +44,7 @@ export default function Intro() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="#contact"
-              className="group px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-medium hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="group px-4 sm:px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-medium hover:scale-105 transition-all duration-300 flex items-center gap-2"
               onClick={() => {
                 setActiveSection("Contact");
                 setTimeOfLastClick(Date.now());
@@ -55,7 +55,7 @@ export default function Intro() {
             </Link>
 
             <a
-              className="px-6 py-3 border-2 border-black dark:border-white font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center gap-2"
+              className="px-4 sm:px-6 py-3 border-2 border-black dark:border-white font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center gap-2"
               href="/CV.pdf"
               download
             >
