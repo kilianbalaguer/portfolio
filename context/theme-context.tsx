@@ -19,33 +19,45 @@ export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
   const [theme, setTheme] = useState<Theme>("light");
+  const [mounted, setMounted] = useState(false);
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    window.localStorage.setItem("theme", newTheme);
+    
+    if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
+    
+    // Force a full re-render by briefly hiding and showing content
+    document.body.style.display = 'none';
+    void document.body.offsetHeight; // Trigger reflow
+    document.body.style.display = '';
   };
 
   useEffect(() => {
+    setMounted(true);
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
     if (localTheme) {
       setTheme(localTheme);
-
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }
   }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ThemeContext.Provider
