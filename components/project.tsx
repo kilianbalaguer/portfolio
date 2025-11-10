@@ -3,18 +3,19 @@
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  title: string;
+  description?: string;
+  tags: readonly string[] | string[];
+  imageUrl: string | StaticImageData;
+  url: string;
+};
 
-export default function Project({
-  title,
-  description,
-  tags,
-  imageUrl,
-  url,
-}: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, url }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
