@@ -23,7 +23,7 @@ export default function LanguageSwitch() {
   return (
     <div className="relative">
       <button
-        className={`flex items-center gap-2 px-3 py-2 border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all font-medium touch-manipulation ${
+        className={`flex items-center gap-2 w-8 h-8 justify-center border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all font-medium touch-manipulation ${
           isOpen 
             ? "bg-black dark:bg-white text-white dark:text-black" 
             : "bg-white dark:bg-black"
@@ -36,9 +36,6 @@ export default function LanguageSwitch() {
         aria-expanded={isOpen}
       >
         <span className="text-lg">{currentLanguage?.flag}</span>
-        <span className="hidden sm:inline text-xs font-mono tracking-wider">
-          {currentLanguage?.code.toUpperCase()}
-        </span>
       </button>
 
       {isOpen && (
@@ -50,7 +47,7 @@ export default function LanguageSwitch() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute right-0 mt-2 py-0 w-48 bg-white dark:bg-black border-2 border-black dark:border-white z-20"
+            className="absolute right-0 md:right-0 md:left-auto left-auto mt-2 py-0 w-48 bg-white dark:bg-black border-2 border-black dark:border-white z-20 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
           >
             {languages.map((lang, index) => (
               <button
