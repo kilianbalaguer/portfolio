@@ -4,98 +4,103 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { language } = useLanguage();
+  const t = translations[language];
 
   return (
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-5xl text-left sm:mb-0 scroll-mt-[100rem] pt-32"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
-          >
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="inline-block mb-4 px-4 py-1 bg-black dark:bg-white text-white dark:text-black text-sm font-mono transition-all duration-300">
+            {t.introBadge}
+          </div>
+          <h1 className="text-6xl sm:text-7xl font-black mb-6 leading-tight">
+            {t.introTitle.split(' ')[0]}<br />
+            <span className="italic">{t.introTitle.split(' ')[1]}</span>
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            {t.introDescription}
+          </p>
+          
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="#contact"
+              className="group px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-medium hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+              }}
+            >
+              {t.getInTouch}
+              <BsArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <a
+              className="px-6 py-3 border-2 border-black dark:border-white font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center gap-2"
+              href="/CV.pdf"
+              download
+            >
+              {t.resume} <HiDownload />
+            </a>
+          </div>
+
+          <div className="flex gap-4 mt-6">
+            <a
+              href="https://github.com"
+              target="_blank"
+              className="text-3xl hover:scale-110 transition-transform"
+            >
+              <FaGithubSquare />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              className="text-3xl hover:scale-110 transition-transform"
+            >
+              <BsLinkedin />
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative"
+        >
+          <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="absolute inset-0 border-4 border-black dark:border-white translate-x-4 translate-y-4 transition-all duration-300" />
             <Image
               src="/KilianBalaguer.JPEG"
-              alt="Ricardo portrait"
-              width="192"
-              height="192"
+              alt="Kilian Balaguer"
+              width="400"
+              height="400"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="relative w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
             />
-          </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
-        </div>
+          </div>
+        </motion.div>
       </div>
-
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I'm Kilian Balaguer.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">3 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. I love cats and{" "}
-        <span className="underline">coding</span>.
-      </motion.h1>
-
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/kilianbalaguer"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
     </section>
   );
 }

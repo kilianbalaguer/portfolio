@@ -2,14 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   --line-color: #e5e7eb;
+  --bg-primary: #f8fafc;
+  --gradient-1: #fecaca;
+  --gradient-2: #ddd6fe;
+  --gradient-3: #bfdbfe;
 }
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
+  --bg-primary: #0f172a;
+  --gradient-1: #7f1d1d;
+  --gradient-2: #4c1d95;
+  --gradient-3: #1e3a8a;
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+/* Hardware acceleration for animations */
+@layer utilities {
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 50%, var(--gradient-3) 100%);
+  }
+  
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 }
