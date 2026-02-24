@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsLinkedin, BsArrowRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
@@ -65,18 +65,11 @@ export default function Intro() {
 
           <div className="flex gap-4 mt-6">
             <a
-              href="https://github.com"
+              href="https://github.com/kilianbalaguer"
               target="_blank"
               className="text-3xl hover:scale-110 transition-transform"
             >
               <FaGithubSquare />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              className="text-3xl hover:scale-110 transition-transform"
-            >
-              <BsLinkedin />
             </a>
           </div>
         </motion.div>
