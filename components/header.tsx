@@ -9,6 +9,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import LanguageSwitch from "./language-switch";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -66,6 +67,19 @@ export default function Header() {
                 </motion.li>
               ))}
             </ul>
+            <div className="h-6 w-px bg-gray-300 dark:bg-gray-700" />
+            <a
+              href="https://kilianbalaguer.vercel.app"
+              className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all inline-flex items-center gap-1"
+            >
+              Blog <BsArrowRight className="text-xs" />
+            </a>
+            <a
+              href="https://kilianbalaguer-links.vercel.app"
+              className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all inline-flex items-center gap-1"
+            >
+              Links <BsArrowRight className="text-xs" />
+            </a>
             <LanguageSwitch />
           </div>
 
