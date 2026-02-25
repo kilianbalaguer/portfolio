@@ -16,11 +16,12 @@ export default function Header() {
     useActiveSectionContext();
   const { language } = useLanguage();
   const t = translations[language];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="z-[999] relative">
       <motion.div
-        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 h-16 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 ${open ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 h-16 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
@@ -88,59 +89,37 @@ export default function Header() {
             <div className="relative">
               <LanguageSwitch />
             </div>
-            <MobileMenuButton />
+            <MobileMenuButton isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           </div>
         </nav>
       </motion.div>
       {/* Mobile nav overlay (renders outside the fixed bar) */}
-      <MobileNav />
+      <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </header>
   );
 }
 
-function MobileMenuButton() {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  // Listen to menu state
-  React.useEffect(() => {
-    const handler = () => setIsOpen((v) => !v);
-    window.addEventListener('kb-toggle-mobile-nav', handler);
-    return () => window.removeEventListener('kb-toggle-mobile-nav', handler);
-  }, []);
-  
-  // delegated to header via event bus-less pattern: use a simple global toggle using DOM event
-  const toggle = () => {
-    const evt = new CustomEvent('kb-toggle-mobile-nav');
-    window.dispatchEvent(evt);
-  };
-
+function MobileMenuButton({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (value: boolean) => void }) {
   return (
     <button
-      onClick={toggle}
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
       aria-label="Toggle menu"
       className={`w-10 h-10 bg-white dark:bg-black border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all duration-300 font-medium flex items-center justify-center touch-manipulation ${
-        isOpen ? 'rotate-90' : ''
+        isMenuOpen ? 'rotate-90' : ''
       }`}
-      aria-expanded={isOpen}
+      aria-expanded={isMenuOpen}
     >
       <span className="text-xl font-black leading-none">☰</span>
     </button>
   );
 }
 
-function MobileNav() {
+function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (value: boolean) => void }) {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { language } = useLanguage();
   const t = translations[language];
-  const [open, setOpen] = useState(false);
 
-  React.useEffect(() => {
-    const handler = () => setOpen((v) => !v);
-    window.addEventListener('kb-toggle-mobile-nav', handler);
-    return () => window.removeEventListener('kb-toggle-mobile-nav', handler);
-  }, []);
-
-  if (!open) return null;
+  if (!isMenuOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[998] bg-white/95 dark:bg-black/95 backdrop-blur-sm p-6 md:hidden animate-expandFromTop">
@@ -149,7 +128,7 @@ function MobileNav() {
           <div className="text-2xl font-black">KB</div>
           <button 
             onClick={(e) => {
-              setOpen(false);
+              setIsMenuOpen(false);
               e.currentTarget.blur();
             }} 
             aria-label="Close menu" 
@@ -167,7 +146,7 @@ function MobileNav() {
                 onClick={(e) => {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
-                  setOpen(false);
+                  setIsMenuOpen(false);
                 }}
                 className="block text-2xl font-black hover:translate-x-2 transition-transform"
               >
@@ -179,7 +158,7 @@ function MobileNav() {
             <a
               href="https://kilianbalaguer-blog.vercel.app"
               className="block text-2xl font-black hover:translate-x-2 transition-transform"
-              onClick={() => setOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               Blog <BsArrowRight className="inline text-base" />
             </a>
@@ -188,7 +167,7 @@ function MobileNav() {
             <a
               href="https://kilianbalaguer-linkpage.vercel.app"
               className="block text-2xl font-black hover:translate-x-2 transition-transform"
-              onClick={() => setOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               Links <BsArrowRight className="inline text-base" />
             </a>
