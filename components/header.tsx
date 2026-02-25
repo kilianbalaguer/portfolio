@@ -164,6 +164,24 @@ function MobileNav() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="https://kilianbalaguer-blog.vercel.app"
+              className="block text-2xl font-black hover:translate-x-2 transition-transform"
+              onClick={() => setOpen(false)}
+            >
+              Blog <BsArrowRight className="inline text-base" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://kilianbalaguer-linkpage.vercel.app"
+              className="block text-2xl font-black hover:translate-x-2 transition-transform"
+              onClick={() => setOpen(false)}
+            >
+              Links <BsArrowRight className="inline text-base" />
+            </a>
+          </li>
         </ul>
       </div>
     </div>
