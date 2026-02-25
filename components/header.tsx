@@ -21,10 +21,13 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 h-16 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 p-0 ${
+          isMenuOpen ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+        }`}
+        animate={{
+          height: isMenuOpen ? 48 : 64,
+        }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
       >
         <nav className="h-full px-4 sm:px-8 flex items-center justify-between">
           <div className="text-2xl font-black">KB</div>
