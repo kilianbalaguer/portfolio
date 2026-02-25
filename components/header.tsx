@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 h-16 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300"
+        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 h-16 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 ${open ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
@@ -99,6 +99,15 @@ export default function Header() {
 }
 
 function MobileMenuButton() {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  // Listen to menu state
+  React.useEffect(() => {
+    const handler = () => setIsOpen((v) => !v);
+    window.addEventListener('kb-toggle-mobile-nav', handler);
+    return () => window.removeEventListener('kb-toggle-mobile-nav', handler);
+  }, []);
+  
   // delegated to header via event bus-less pattern: use a simple global toggle using DOM event
   const toggle = () => {
     const evt = new CustomEvent('kb-toggle-mobile-nav');
@@ -109,8 +118,10 @@ function MobileMenuButton() {
     <button
       onClick={toggle}
       aria-label="Toggle menu"
-      className="w-10 h-10 bg-white dark:bg-black border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all font-medium flex items-center justify-center touch-manipulation"
-      aria-expanded="false"
+      className={`w-10 h-10 bg-white dark:bg-black border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all duration-300 font-medium flex items-center justify-center touch-manipulation ${
+        isOpen ? 'rotate-90' : ''
+      }`}
+      aria-expanded={isOpen}
     >
       <span className="text-xl font-black leading-none">☰</span>
     </button>
@@ -132,8 +143,8 @@ function MobileNav() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[998] bg-white/95 dark:bg-black/95 backdrop-blur-sm p-6 md:hidden">
-      <div className="max-w-2xl mx-auto">
+    <div className="fixed inset-0 z-[998] bg-white/95 dark:bg-black/95 backdrop-blur-sm p-6 md:hidden animate-expandFromTop">
+      <div className="max-w-2xl mx-auto animate-slideDown">
         <div className="flex items-center justify-between mb-8">
           <div className="text-2xl font-black">KB</div>
           <button 
@@ -142,15 +153,15 @@ function MobileNav() {
               e.currentTarget.blur();
             }} 
             aria-label="Close menu" 
-            className="w-10 h-10 bg-black dark:bg-white text-white dark:text-black active:scale-95 transition-all duration-300 text-2xl font-black touch-manipulation flex items-center justify-center border-2 border-black dark:border-white"
+            className="w-10 h-10 bg-black dark:bg-white text-white dark:text-black active:scale-95 transition-all duration-300 text-2xl font-black touch-manipulation flex items-center justify-center border-2 border-black dark:border-white animate-rotate"
           >
             ✕
           </button>
         </div>
 
         <ul className="flex flex-col gap-6">
-          {links.map((link) => (
-            <li key={link.hash}>
+          {links.map((link, index) => (
+            <li key={link.hash} className="animate-slideIn" style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: 'backwards' }}>
               <a
                 href={link.hash}
                 onClick={(e) => {
@@ -164,7 +175,7 @@ function MobileNav() {
               </a>
             </li>
           ))}
-          <li>
+          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + links.length * 0.1}s`, animationFillMode: 'backwards' }}>
             <a
               href="https://kilianbalaguer-blog.vercel.app"
               className="block text-2xl font-black hover:translate-x-2 transition-transform"
@@ -173,7 +184,7 @@ function MobileNav() {
               Blog <BsArrowRight className="inline text-base" />
             </a>
           </li>
-          <li>
+          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + (links.length + 1) * 0.1}s`, animationFillMode: 'backwards' }}>
             <a
               href="https://kilianbalaguer-linkpage.vercel.app"
               className="block text-2xl font-black hover:translate-x-2 transition-transform"
