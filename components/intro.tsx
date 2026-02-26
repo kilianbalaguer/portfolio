@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
@@ -67,9 +67,20 @@ export default function Intro() {
             <a
               href="https://github.com/kilianbalaguer"
               target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
               className="text-3xl hover:scale-110 transition-transform"
             >
               <FaGithubSquare />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kilian-balaguer-b7469a3b3"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="text-3xl hover:scale-110 transition-transform"
+            >
+              <FaLinkedin />
             </a>
           </div>
         </motion.div>
