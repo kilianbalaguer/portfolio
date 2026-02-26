@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kilian Balaguer – CV 2026</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111111;
+      background: #ffffff;
+    }
+
+    .header {
+      margin-bottom: 16px;
+      border-bottom: 2px solid #111111;
+      padding-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 2px;
+    }
+
+    .header .role {
+      font-size: 11px;
+      font-weight: 600;
+      color: #666666;
+      margin-bottom: 6px;
+    }
+
+    .header .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 9px;
+      color: #666666;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1.2fr 1.7fr;
+      gap: 12px;
+    }
+
+    .sidebar, .main {
+      border: 2px solid #111111;
+      padding: 12px;
+    }
+
+    .section {
+      margin-bottom: 12px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section h2 {
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      padding-bottom: 3px;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .pill {
+      border: 1px solid #111111;
+      padding: 2px 5px;
+      font-size: 8px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 11px;
+      font-weight: 900;
+      margin: 8px 0 2px;
+    }
+
+    .meta {
+      font-size: 9px;
+      color: #666666;
+      margin-bottom: 3px;
+    }
+
+    p, li {
+      font-size: 9px;
+      margin-bottom: 5px;
+      color: #666666;
+      line-height: 1.4;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 12px;
+    }
+
+    .card {
+      padding: 7px 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .card:first-of-type {
+      border-top: none;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+      margin-top: 3px;
+    }
+
+    .tag {
+      background: #111111;
+      color: #ffffff;
+      padding: 1px 4px;
+      font-size: 7px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Kilian Balaguer</h1>
+    <div class="role">15-year-old Developer and Creator</div>
+    <div class="contact">
+      <span>Rijnsburg, Netherlands</span>
+      <span>kilianbalaguer1@icloud.com</span>
+      <span>github.com/kilianbalaguer</span>
+      <span>kilianbalaguer-portfolio.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <aside class="sidebar">
+      <div class="section">
+        <h2>Languages</h2>
+        <div class="pills">
+          <span class="pill">JavaScript</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Python</span>
+          <span class="pill">Java</span>
+          <span class="pill">Swift</span>
+          <span class="pill">Kotlin</span>
+          <span class="pill">C</span>
+          <span class="pill">C++</span>
+          <span class="pill">C#</span>
+          <span class="pill">Objective-C</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Frameworks</h2>
+        <div class="pills">
+          <span class="pill">React</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">SwiftUI</span>
+          <span class="pill">Flutter</span>
+          <span class="pill">WinUI 3</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Tools</h2>
+        <div class="pills">
+          <span class="pill">Xcode</span>
+          <span class="pill">Android Studio</span>
+          <span class="pill">VS Code</span>
+          <span class="pill">Visual Studio</span>
+          <span class="pill">Unreal Engine</span>
+          <span class="pill">Unity</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Notion</span>
+          <span class="pill">GitHub</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Interests</h2>
+        <ul class="list">
+          <li>Music production and instruments</li>
+          <li>Cooking and experimenting</li>
+          <li>Game development</li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main">
+      <div class="section">
+        <h2>Projects</h2>
+        <div class="card">
+          <h3>Notiq</h3>
+          <div class="meta">Note-taking and productivity app for students and professionals.</div>
+          <p>Built with modern technologies for seamless experience on Apple platforms.</p>
+          <div class="tags">
+            <span class="tag">Swift</span>
+            <span class="tag">SwiftUI</span>
+            <span class="tag">macOS</span>
+            <span class="tag">iOS</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>StudyHub</h3>
+          <div class="meta">All-in-one study platform for organization and collaboration.</div>
+          <p>Multi-platform stack in active development.</p>
+          <div class="tags">
+            <span class="tag">Swift</span>
+            <span class="tag">Android</span>
+            <span class="tag">Windows</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">C++</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>AeroBrowser</h3>
+          <div class="meta">Modern, fast, privacy-focused browser.</div>
+          <p>Built with Swift and SwiftUI for macOS and iOS devices.</p>
+          <div class="tags">
+            <span class="tag">Swift</span>
+            <span class="tag">SwiftUI</span>
+            <span class="tag">macOS</span>
+            <span class="tag">iOS</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>CodeConnect</h3>
+          <div class="meta">Developer-focused social platform for sharing and collaborating.</div>
+          <p>Designed to connect developers around code and projects.</p>
+          <div class="tags">
+            <span class="tag">Swift</span>
+            <span class="tag">Android</span>
+            <span class="tag">Windows</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Kotlin</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+        <div class="card">
+          <h3>Front-End Development – 2021</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 11</div>
+          <p>Started learning HTML, JavaScript, CSS using online resources.</p>
+        </div>
+        <div class="card">
+          <h3>Next.js & Front-End – 2022</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 12</div>
+          <p>Learned Next.js to build modern front-end applications.</p>
+        </div>
+        <div class="card">
+          <h3>Kotlin & Android – 2022–2023</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 12–13</div>
+          <p>Started Kotlin for Android; applied to projects like ScribbleLab (co-owner).</p>
+        </div>
+        <div class="card">
+          <h3>Swift & Apple Development – 2022–2023</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 12–13</div>
+          <p>Learned Swift, C, Storyboard; later transitioned to SwiftUI.</p>
+        </div>
+        <div class="card">
+          <h3>C# & WinUI – 2022–2023</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 12–13</div>
+          <p>Learned C# and expanded XML knowledge to build Windows apps.</p>
+        </div>
+        <div class="card">
+          <h3>Joined ScribbleLab – 2023</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 13</div>
+          <p>Connected with developer Nevio Hirani, contributed as co-owner and founder.</p>
+        </div>
+        <div class="card">
+          <h3>SwiftUI Migration – 2023–2024</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 13–14</div>
+          <p>Migrated Apple development to SwiftUI to improve app architecture.</p>
+        </div>
+        <div class="card">
+          <h3>Hackintosh Build – 2024</h3>
+          <div class="meta">Rijnsburg, Netherlands - Age 14</div>
+          <p>Built first Hackintosh; gained hardware and macOS experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
