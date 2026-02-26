@@ -105,38 +105,20 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  // Languages
-  "JavaScript",
-  "TypeScript",
-  "Python",
-  "Java",
-  "Swift",
-  "Kotlin",
-  "C",
   "C++",
   "C#",
-  "Objective-C",
-  "HTML",
+  "C",
+  "Python",
+  "JavaScript",
+  "TypeScript",
   "CSS",
-  "XML",
-  "Lua",
-  
-  // Frameworks & Libraries
-  "React",
+  "HTML",
+  "Kotlin",
+  "Node.js",
   "Next.js",
-  "SwiftUI",
-  "Flutter",
-  "WinUI 3",
-  
-  // Tools & Platforms
-  "Unreal Engine",
-  "Unity",
-  "Xcode",
-  "Android Studio",
-  "VS Code",
-  "Visual Studio",
-  "Figma",
-  "Notion",
-  "GitHub",
-  "GitHub Copilot",
+  "Swift",
+  "Lua",
+  "XML",
+  "React",
+  "Java",
 ] as const;
