@@ -91,7 +91,7 @@ function MobileMenuButton({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; 
       onClick={() => setIsMenuOpen(!isMenuOpen)}
       aria-label="Toggle menu"
       className={`w-10 h-10 bg-white dark:bg-black border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all duration-300 font-medium flex items-center justify-center touch-manipulation ${
-        isMenuOpen ? 'rotate-90' : ''
+        isMenuOpen ? "rotate-90" : ""
       }`}
       aria-expanded={isMenuOpen}
     >
@@ -126,7 +126,7 @@ function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMe
 
         <ul className="flex flex-col gap-6">
           {links.map((link, index) => (
-            <li key={link.hash} className="animate-slideIn" style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: 'backwards' }}>
+            <li key={link.hash} className="animate-slideIn" style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: "backwards" }}>
               <a
                 href={link.hash}
                 onClick={(e) => {
@@ -140,7 +140,7 @@ function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMe
               </a>
             </li>
           ))}
-          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + links.length * 0.1}s`, animationFillMode: 'backwards' }}>
+          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + links.length * 0.1}s`, animationFillMode: "backwards" }}>
             <a
               href="https://kilianbalaguer-blog.vercel.app"
               className="block text-2xl font-black hover:translate-x-2 transition-transform"
@@ -149,7 +149,7 @@ function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMe
               Blog <BsArrowRight className="inline text-base" />
             </a>
           </li>
-          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + (links.length + 1) * 0.1}s`, animationFillMode: 'backwards' }}>
+          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + (links.length + 1) * 0.1}s`, animationFillMode: "backwards" }}>
             <a
               href="https://kilianbalaguer-linkpage.vercel.app"
               className="block text-2xl font-black hover:translate-x-2 transition-transform"
