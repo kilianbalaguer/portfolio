@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-[53rem] mx-auto">
         <div className="flex justify-center gap-6 mb-6">
           <a
-            href="https://github.com/NotiqTeam"
+            href="https://github.com/kilianbalaguer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-2xl"
@@ -23,22 +23,13 @@ export default function Footer() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/kilian-balaguer-b7469a3b3"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-2xl"
             aria-label="LinkedIn"
           >
             <FaLinkedin />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-2xl"
-            aria-label="Twitter"
-          >
-            <FaTwitter />
           </a>
         </div>
 
