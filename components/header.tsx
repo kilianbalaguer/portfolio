@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
@@ -20,14 +19,10 @@ export default function Header() {
 
   return (
     <header className="z-[999] relative">
-      <motion.div
+      <div
         className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 p-0 ${
-          isMenuOpen ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+          isMenuOpen ? "opacity-0 scale-95 h-12" : "opacity-100 scale-100 h-16"
         }`}
-        animate={{
-          height: isMenuOpen ? 48 : 64,
-        }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
       >
         <nav className="h-full px-4 sm:px-8 flex items-center justify-between">
           <div className="text-2xl font-black">KB</div>
@@ -36,11 +31,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ul className="flex items-center gap-1">
               {links.map((link) => (
-                <motion.li
-                  key={link.hash}
-                  initial={{ y: -100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                >
+                <li key={link.hash}>
                   <Link
                     className={clsx(
                       "px-4 py-2 text-sm font-medium transition-all relative",
@@ -57,18 +48,10 @@ export default function Header() {
                   >
                     {t[link.name.toLowerCase() as keyof typeof t] as string}
                     {link.name === activeSection && (
-                      <motion.span
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-black dark:bg-white"
-                        layoutId="activeSection"
-                        transition={{
-                          type: "spring",
-                          stiffness: 380,
-                          damping: 30,
-                        }}
-                      ></motion.span>
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black dark:bg-white"></span>
                     )}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
             <div className="h-6 w-px bg-gray-300 dark:bg-gray-700" />
@@ -95,7 +78,7 @@ export default function Header() {
             <MobileMenuButton isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           </div>
         </nav>
-      </motion.div>
+      </div>
       {/* Mobile nav overlay (renders outside the fixed bar) */}
       <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </header>
