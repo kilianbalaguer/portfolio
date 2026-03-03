@@ -13,6 +13,7 @@ export const translations = {
     introSubtitle: "15-Year-Old Developer & Creator",
     introDescription: "I build apps, games, and websites. I'm passionate about coding, music, and creating things that matter.",
     introBadge: "DEVELOPER / CREATOR",
+    introTaken: "Happily taken by a beautiful girl called Alisha 💕",
     getInTouch: "Get in touch",
     resume: "Resume",
     
@@ -71,6 +72,7 @@ export const translations = {
     introSubtitle: "Développeur & Créateur de 15 ans",
     introDescription: "Je crée des applications, des jeux et des sites web. Je suis passionné par le code, la musique et la création de choses qui comptent.",
     introBadge: "DÉVELOPPEUR / CRÉATEUR",
+    introTaken: "Heureux d'être avec une belle fille appelée Alisha 💕",
     getInTouch: "Me contacter",
     resume: "CV",
     
@@ -129,6 +131,7 @@ export const translations = {
     introSubtitle: "مطور ومبدع في سن 15",
     introDescription: "أقوم ببناء التطبيقات والألعاب والمواقع. أنا شغوف بالبرمجة والموسيقى وإنشاء أشياء مهمة.",
     introBadge: "مطور / مبدع",
+    introTaken: "سعيد بأنني مع فتاة جميلة اسمها أليشا 💕",
     getInTouch: "تواصل معي",
     resume: "السيرة الذاتية",
     
@@ -187,6 +190,7 @@ export const translations = {
     introSubtitle: "15-jarige Ontwikkelaar & Maker",
     introDescription: "Ik bouw apps, games en websites. Ik ben gepassioneerd over coderen, muziek en het creëren van dingen die ertoe doen.",
     introBadge: "ONTWIKKELAAR / MAKER",
+    introTaken: "Gelukkig samen met een mooi meisje genaamd Alisha 💕",
     getInTouch: "Neem contact op",
     resume: "CV",
     
@@ -245,6 +249,7 @@ export const translations = {
     introSubtitle: "15-jähriger Entwickler & Schöpfer",
     introDescription: "Ich entwickle Apps, Spiele und Websites. Ich bin leidenschaftlich am Programmieren, Musik und am Erschaffen von Dingen, die wichtig sind.",
     introBadge: "ENTWICKLER / SCHÖPFER",
+    introTaken: "Glücklich mit einem wunderschönen Mädchen namens Alisha 💕",
     getInTouch: "Kontakt aufnehmen",
     resume: "Lebenslauf",
     
@@ -303,6 +308,7 @@ export const translations = {
     introSubtitle: "Desarrollador y Creador de 15 años",
     introDescription: "Construyo aplicaciones, juegos y sitios web. Me apasiona programar, la música y crear cosas que importan.",
     introBadge: "DESARROLLADOR / CREADOR",
+    introTaken: "Felizmente junto a una hermosa chica llamada Alisha 💕",
     getInTouch: "Ponte en contacto",
     resume: "Currículum",
     
@@ -361,6 +367,7 @@ export const translations = {
     introSubtitle: "15세 개발자 & 크리에이터",
     introDescription: "앱, 게임, 웹사이트를 만듭니다. 코딩, 음악, 의미 있는 것들을 만드는 것에 열정적입니다.",
     introBadge: "개발자 / 크리에이터",
+    introTaken: "아름다운 여자친구 알리샤와 행복합니다 💕",
     getInTouch: "연락하기",
     resume: "이력서",
     
