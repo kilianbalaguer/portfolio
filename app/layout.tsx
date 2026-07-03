@@ -1,18 +1,13 @@
-import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
-import { Toaster } from "react-hot-toast";
 import LanguageContextProvider from "@/context/language-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Kilian | Personal Portfolio",
-  description: "Kilian is a full-stack developer with 4 years of experience.",
+  title: "Site Revamp In Progress",
+  description: "This website is currently being rebuilt and will be back soon.",
   verification: {
     google: "gzKo8PYMPRyPu8x6X51ELGk86qyGfGRNpjGvgISgq3U",
   },
@@ -52,13 +47,7 @@ export default function RootLayout({
         
         <ThemeContextProvider>
           <LanguageContextProvider>
-            <ActiveSectionContextProvider>
-              <Header />
-              {children}
-              <Footer />
-              <Toaster position="top-right" />
-              <ThemeSwitch />
-            </ActiveSectionContextProvider>
+            {children}
           </LanguageContextProvider>
         </ThemeContextProvider>
       </body>
