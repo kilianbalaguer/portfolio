@@ -5,10 +5,8 @@ import { FaBook } from "react-icons/fa";
 import { FaFileCode } from "react-icons/fa6";
 import { GrAndroid } from "react-icons/gr";
 import { SiMacos } from "react-icons/si";
-import { FaUserFriends, FaWindows } from "react-icons/fa";
+import { FaWindows } from "react-icons/fa";
 import { SiXcode } from "react-icons/si";
-import notiqImg from "@/public/Notiq.png";
-import studyhubImg from "@/public/StudyHub.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import areobrowserImg from "@/public/AeroBrowser.png";
 export const links = [
@@ -60,34 +58,16 @@ export const experiencesData = [
     index: 4,
   },
   {
-    icon: React.createElement(FaUserFriends),
+    icon: React.createElement(SiXcode),
     index: 5,
   },
   {
-    icon: React.createElement(SiXcode),
-    index: 6,
-  },
-  {
     icon: React.createElement(SiMacos),
-    index: 7,
+    index: 6,
   },
 ] as const;
 
 export const projectsData = [
-  {
-    id: "notiq",
-    tags: ["Swift", "SwiftUI", "macOS", "iOS"],
-    imageUrl: notiqImg,
-    githubUrl: "https://github.com/NotiqTeam/NotiqApp",
-    liveUrl: "coming-soon",
-  },
-  {
-    id: "studyhub",
-    tags: ["Swift", "SwiftUI", "macOS", "iOS", "Android", "Windows", "NextJS", "Kotlin", "C++", "C" ],
-    imageUrl: studyhubImg,
-    githubUrl: "coming-soon",
-    liveUrl: "coming-soon",
-  },
   {
     id: "aerobrowser",
     tags: ["Swift", "SwiftUI", "macOS", "iOS"],
@@ -96,8 +76,8 @@ export const projectsData = [
     liveUrl: "coming-soon",
   },
   {
-    id: "codeconnect",
-    tags: ["Swift", "SwiftUI", "macOS", "iOS", "Android", "Windows", "NextJS", "Kotlin", "C++", "C" ],
+    id: "voltaire",
+    tags: ["Swift", "MLX", "iPhone", "iPad", "macOS", "Local AI"],
     imageUrl: "coming-soon",
     githubUrl: "coming-soon",
     liveUrl: "coming-soon",

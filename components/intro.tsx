@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
@@ -22,9 +22,9 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-5xl text-left sm:mb-0 scroll-mt-[100rem] pt-32"
+      className="mb-28 max-w-5xl text-left sm:mb-0 scroll-mt-[100rem] pt-28 sm:pt-32"
     >
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid gap-12 items-center md:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -34,8 +34,10 @@ export default function Intro() {
             {t.introBadge}
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
-            {t.introTitle.split(' ')[0]}<br />
-            <span className="italic">{t.introTitle.split(' ')[1]}</span>
+            <span className="block">{t.introTitle}</span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl font-medium italic text-gray-600 dark:text-gray-400 mt-2">
+              {t.introSubtitle}
+            </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
             {t.introDescription}
@@ -59,7 +61,7 @@ export default function Intro() {
 
             <a
               className="px-4 sm:px-6 py-3 border-2 border-black dark:border-white font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center gap-2"
-              href="/CV.pdf"
+              href="/CV.html"
               download
             >
               {t.resume} <HiDownload />
@@ -75,15 +77,6 @@ export default function Intro() {
               className="text-3xl hover:scale-110 transition-transform"
             >
               <FaGithubSquare />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kilian-balaguer-b7469a3b3"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="text-3xl hover:scale-110 transition-transform"
-            >
-              <FaLinkedin />
             </a>
           </div>
         </motion.div>
