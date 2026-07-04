@@ -41,10 +41,10 @@ export default function Contact() {
             <div>
               <div className="font-black text-sm mb-1 tracking-wider">{t.contactEmail}</div>
               <a 
-                href="mailto:kilianbalaguer1@icloud.com"
+                href="mailto:kilianbalaguer67@icloud.com"
                 className="text-gray-700 dark:text-gray-300 hover:underline"
               >
-                kilianbalaguer1@icloud.com
+                kilianbalaguer67@icloud.com
               </a>
             </div>
           </div>

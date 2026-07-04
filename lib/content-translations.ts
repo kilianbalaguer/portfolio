@@ -1,128 +1,72 @@
 export const projectTranslations = {
   en: {
-    notiq: {
-      title: "Notiq",
-      description: "A powerful note-taking and productivity app designed for students and professionals. Built with modern technologies for a seamless experience.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "An all-in-one study platform helping students organize their learning, track progress, and collaborate with peers. Currently in active development.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "A modern, fast, and privacy-focused browser for macOS, iOS, and iPadOS. Built with Swift and SwiftUI for optimal performance.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "A social media platform specifically designed for developers to share code, collaborate on projects, and connect with the coding community.",
+    voltaire: {
+      title: "Voltaire",
+      description: "A local AI app built with Swift and MLX for iPhone first, then Mac and iPad, with support for models from Gemma to Mistral, DeepSeek, Qwen, and more.",
     },
   },
   fr: {
-    notiq: {
-      title: "Notiq",
-      description: "Une application puissante de prise de notes et de productivité conçue pour les étudiants et les professionnels. Construite avec des technologies modernes pour une expérience fluide.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "Une plateforme d'étude tout-en-un aidant les étudiants à organiser leur apprentissage, suivre leurs progrès et collaborer avec leurs pairs. Actuellement en développement actif.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "Un navigateur moderne, rapide et axé sur la confidentialité pour macOS, iOS et iPadOS. Construit avec Swift et SwiftUI pour des performances optimales.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "Une plateforme de médias sociaux spécialement conçue pour les développeurs pour partager du code, collaborer sur des projets et se connecter avec la communauté de codage.",
+    voltaire: {
+      title: "Voltaire",
+      description: "Une application d'IA locale créée avec Swift et MLX pour iPhone d'abord, puis Mac et iPad, avec des modèles de Gemma à Mistral, DeepSeek, Qwen, et plus encore.",
     },
   },
   ar: {
-    notiq: {
-      title: "Notiq",
-      description: "تطبيق قوي لتدوين الملاحظات والإنتاجية مصمم للطلاب والمحترفين. تم بناؤه بتقنيات حديثة لتجربة سلسة.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "منصة دراسية شاملة تساعد الطلاب على تنظيم تعلمهم وتتبع تقدمهم والتعاون مع أقرانهم. قيد التطوير النشط حاليًا.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "متصفح حديث وسريع ويركز على الخصوصية لنظام macOS و iOS و iPadOS. تم بناؤه باستخدام Swift و SwiftUI للأداء الأمثل.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "منصة وسائط اجتماعية مصممة خصيصًا للمطورين لمشاركة الكود والتعاون في المشاريع والتواصل مع مجتمع البرمجة.",
+    voltaire: {
+      title: "Voltaire",
+      description: "تطبيق ذكاء اصطناعي محلي مبني بـ Swift و MLX للـ iPhone أولاً، ثم Mac و iPad، مع دعم لنماذج من Gemma إلى Mistral و DeepSeek و Qwen والمزيد.",
     },
   },
   nl: {
-    notiq: {
-      title: "Notiq",
-      description: "Een krachtige notitie- en productiviteitsapp ontworpen voor studenten en professionals. Gebouwd met moderne technologieën voor een naadloze ervaring.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "Een alles-in-één studieplatform dat studenten helpt hun leren te organiseren, voortgang bij te houden en samen te werken met peers. Momenteel in actieve ontwikkeling.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "Een moderne, snelle en privacy-gerichte browser voor macOS, iOS en iPadOS. Gebouwd met Swift en SwiftUI voor optimale prestaties.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "Een social media platform speciaal ontworpen voor ontwikkelaars om code te delen, samen te werken aan projecten en te verbinden met de coding community.",
+    voltaire: {
+      title: "Voltaire",
+      description: "Een lokale AI-app gebouwd met Swift en MLX voor iPhone eerst, daarna Mac en iPad, met ondersteuning voor modellen van Gemma tot Mistral, DeepSeek, Qwen en meer.",
     },
   },
   de: {
-    notiq: {
-      title: "Notiq",
-      description: "Eine leistungsstarke Notiz- und Produktivitäts-App für Studenten und Profis. Mit modernen Technologien für ein nahtloses Erlebnis gebaut.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "Eine All-in-One-Lernplattform, die Studenten hilft, ihr Lernen zu organisieren, Fortschritte zu verfolgen und mit Kommilitonen zusammenzuarbeiten. Derzeit in aktiver Entwicklung.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "Ein moderner, schneller und datenschutzorientierter Browser für macOS, iOS und iPadOS. Mit Swift und SwiftUI für optimale Leistung gebaut.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "Eine Social-Media-Plattform speziell für Entwickler zum Teilen von Code, Zusammenarbeiten an Projekten und Vernetzen mit der Coding-Community.",
+    voltaire: {
+      title: "Voltaire",
+      description: "Eine lokale KI-App, gebaut mit Swift und MLX für iPhone zuerst, später Mac und iPad, mit Unterstützung für Modelle von Gemma bis Mistral, DeepSeek, Qwen und mehr.",
     },
   },
   es: {
-    notiq: {
-      title: "Notiq",
-      description: "Una poderosa aplicación de notas y productividad diseñada para estudiantes y profesionales. Construida con tecnologías modernas para una experiencia fluida.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "Una plataforma de estudio todo en uno que ayuda a los estudiantes a organizar su aprendizaje, seguir su progreso y colaborar con compañeros. Actualmente en desarrollo activo.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "Un navegador moderno, rápido y enfocado en la privacidad para macOS, iOS e iPadOS. Construido con Swift y SwiftUI para un rendimiento óptimo.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "Una plataforma de redes sociales diseñada específicamente para desarrolladores para compartir código, colaborar en proyectos y conectarse con la comunidad de programación.",
+    voltaire: {
+      title: "Voltaire",
+      description: "Una app local de IA creada con Swift y MLX para iPhone primero, y luego Mac e iPad, con soporte para modelos desde Gemma hasta Mistral, DeepSeek, Qwen y más.",
     },
   },
   ko: {
-    notiq: {
-      title: "Notiq",
-      description: "학생과 전문가를 위해 설계된 강력한 노트 작성 및 생산성 앱입니다. 원활한 경험을 위해 최신 기술로 구축되었습니다.",
-    },
-    studyhub: {
-      title: "StudyHub",
-      description: "학생들이 학습을 조직하고, 진행 상황을 추적하며, 동료들과 협업할 수 있도록 돕는 올인원 학습 플랫폼입니다. 현재 활발히 개발 중입니다.",
-    },
     aerobrowser: {
       title: "AeroBrowser",
       description: "macOS, iOS 및 iPadOS를 위한 현대적이고 빠르며 개인정보 보호에 중점을 둔 브라우저입니다. 최적의 성능을 위해 Swift와 SwiftUI로 구축되었습니다.",
     },
-    codeconnect: {
-      title: "CodeConnect",
-      description: "개발자가 코드를 공유하고, 프로젝트에서 협업하며, 코딩 커뮤니티와 연결할 수 있도록 특별히 설계된 소셜 미디어 플랫폼입니다.",
+    voltaire: {
+      title: "Voltaire",
+      description: "Swift와 MLX로 만든 로컬 AI 앱으로, 먼저 iPhone용으로 시작하고 이후 Mac과 iPad를 지원하며 Gemma부터 Mistral, DeepSeek, Qwen 모델과 더 많은 모델을 지원합니다.",
     },
   },
 } as const;
@@ -144,7 +88,7 @@ export const experienceTranslations = {
     {
       title: "Kotlin & Android",
       location: "Rijnsburg, Netherlands",
-      description: "Age 12 — started Kotlin for Android; later used this knowledge in projects like ScribbleLab (co-owner).",
+      description: "Age 12 — started Kotlin for Android and later used it in collaborative app projects.",
       date: "2022–2023",
     },
     {
@@ -160,15 +104,9 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "Joined ScribbleLab",
-      location: "Rijnsburg, Netherlands",
-      description: "Age 13 — connected with developer Nevio Hirani and contributed to ScribbleLab as co-owner/founder.",
-      date: "2023",
-    },
-    {
       title: "SwiftUI Migration",
       location: "Rijnsburg, Netherlands",
-      description: "Age 13 — migrated Apple development to SwiftUI to improve app architecture for ScribbleLab.",
+      description: "Age 13 — migrated Apple development to SwiftUI to improve app architecture.",
       date: "2023–2024",
     },
     {
@@ -194,7 +132,7 @@ export const experienceTranslations = {
     {
       title: "Kotlin & Android",
       location: "Rijnsburg, Pays-Bas",
-      description: "12 ans — j'ai commencé Kotlin pour Android ; ces connaissances ont été utiles pour des projets comme ScribbleLab (co-propriétaire).",
+      description: "12 ans — j'ai commencé Kotlin pour Android ; ces connaissances ont ensuite été utiles dans des projets collaboratifs.",
       date: "2022–2023",
     },
     {
@@ -210,15 +148,9 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "Rejoint ScribbleLab",
-      location: "Rijnsburg, Pays-Bas",
-      description: "13 ans — j'ai rencontré le développeur Nevio Hirani et j'ai contribué à ScribbleLab en tant que co-propriétaire/fondateur.",
-      date: "2023",
-    },
-    {
       title: "Migration vers SwiftUI",
       location: "Rijnsburg, Pays-Bas",
-      description: "13 ans — j'ai migré le développement Apple vers SwiftUI pour améliorer l'architecture de l'application ScribbleLab.",
+      description: "13 ans — j'ai migré le développement Apple vers SwiftUI pour améliorer l'architecture de l'application.",
       date: "2023–2024",
     },
     {
@@ -236,15 +168,9 @@ export const experienceTranslations = {
       date: "2021",
     },
     {
-      title: "Next.js (الواجهة الأمامية)",
-      location: "رينزبورغ، هولندا",
-      description: "12 سنة — تعلمت Next.js لبناء واجهات أمامية حديثة وتحسين مهاراتي في تطوير الويب.",
-      date: "2022",
-    },
-    {
       title: "Kotlin و Android",
       location: "رينزبورغ، هولندا",
-      description: "12 سنة — بدأت Kotlin لتطوير Android؛ كانت هذه المعرفة مفيدة في مشاريع مثل ScribbleLab (مالك مشارك).",
+      description: "12 سنة — بدأت Kotlin لتطوير Android، ثم استخدمت هذه المعرفة في مشاريع تعاونية.",
       date: "2022–2023",
     },
     {
@@ -260,15 +186,15 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "انضممت إلى ScribbleLab",
+      title: "تعاون جماعي",
       location: "رينزبورغ، هولندا",
-      description: "13 سنة — تواصلت مع المطور Nevio Hirani وساهمت في ScribbleLab كمالك مشارك/مؤسس.",
+      description: "13 سنة — عملت مع مطور آخر على مشاريع تطبيقات وتعلمت أساليب العمل الجماعي.",
       date: "2023",
     },
     {
       title: "الانتقال إلى SwiftUI",
       location: "رينزبورغ، هولندا",
-      description: "13 سنة — قمت بترحيل تطوير Apple إلى SwiftUI لتحسين بنية التطبيق لـ ScribbleLab.",
+      description: "13 سنة — قمت بترحيل تطوير Apple إلى SwiftUI لتحسين بنية التطبيق.",
       date: "2023–2024",
     },
     {
@@ -294,7 +220,7 @@ export const experienceTranslations = {
     {
       title: "Kotlin & Android",
       location: "Rijnsburg, Nederland",
-      description: "12 jaar — ik begon met Kotlin voor Android; deze kennis bleek nuttig voor projecten zoals ScribbleLab (mede-eigenaar).",
+      description: "12 jaar — ik begon met Kotlin voor Android; deze kennis bleek later nuttig in samenwerkingsprojecten.",
       date: "2022–2023",
     },
     {
@@ -310,15 +236,9 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "Aangesloten bij ScribbleLab",
-      location: "Rijnsburg, Nederland",
-      description: "13 jaar — ik kwam in contact met ontwikkelaar Nevio Hirani en droeg bij aan ScribbleLab als mede-eigenaar/oprichter.",
-      date: "2023",
-    },
-    {
       title: "Migratie naar SwiftUI",
       location: "Rijnsburg, Nederland",
-      description: "13 jaar — ik migreerde Apple-development naar SwiftUI om de app-architectuur voor ScribbleLab te verbeteren.",
+      description: "13 jaar — ik migreerde Apple-development naar SwiftUI om de app-architectuur te verbeteren.",
       date: "2023–2024",
     },
     {
@@ -336,15 +256,9 @@ export const experienceTranslations = {
       date: "2021",
     },
     {
-      title: "Next.js (Front-End)",
-      location: "Rijnsburg, Niederlande",
-      description: "12 Jahre — ich lernte Next.js, um moderne Front-Ends zu erstellen und meine Webentwicklung-Fähigkeiten zu verbessern.",
-      date: "2022",
-    },
-    {
       title: "Kotlin & Android",
       location: "Rijnsburg, Niederlande",
-      description: "12 Jahre — ich begann mit Kotlin für Android; dieses Wissen war nützlich für Projekte wie ScribbleLab (Miteigentümer).",
+      description: "12 Jahre — ich begann mit Kotlin für Android; dieses Wissen war später in kollaborativen Projekten nützlich.",
       date: "2022–2023",
     },
     {
@@ -360,15 +274,15 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "Beitritt zu ScribbleLab",
+      title: "Teamzusammenarbeit",
       location: "Rijnsburg, Niederlande",
-      description: "13 Jahre — ich kam mit Entwickler Nevio Hirani in Kontakt und trug als Miteigentümer/Gründer zu ScribbleLab bei.",
+      description: "13 Jahre — ich arbeitete mit einem anderen Entwickler an App-Projekten und lernte Teamabläufe kennen.",
       date: "2023",
     },
     {
       title: "Migration zu SwiftUI",
       location: "Rijnsburg, Niederlande",
-      description: "13 Jahre — ich migrierte Apple-Entwicklung zu SwiftUI, um die App-Architektur für ScribbleLab zu verbessern.",
+      description: "13 Jahre — ich migrierte Apple-Entwicklung zu SwiftUI, um die App-Architektur zu verbessern.",
       date: "2023–2024",
     },
     {
@@ -386,15 +300,9 @@ export const experienceTranslations = {
       date: "2021",
     },
     {
-      title: "Next.js (Front-End)",
-      location: "Rijnsburg, Países Bajos",
-      description: "12 años — aprendí Next.js para construir front-ends modernos y mejorar mis habilidades en desarrollo web.",
-      date: "2022",
-    },
-    {
       title: "Kotlin & Android",
       location: "Rijnsburg, Países Bajos",
-      description: "12 años — comencé con Kotlin para Android; este conocimiento fue útil en proyectos como ScribbleLab (copropietario).",
+      description: "12 años — comencé con Kotlin para Android; ese conocimiento luego fue útil en proyectos colaborativos.",
       date: "2022–2023",
     },
     {
@@ -410,15 +318,15 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "Me uní a ScribbleLab",
+      title: "Colaboración en equipo",
       location: "Rijnsburg, Países Bajos",
-      description: "13 años — contacté con el desarrollador Nevio Hirani y contribuí a ScribbleLab como copropietario/fundador.",
+      description: "13 años — trabajé con otro desarrollador en proyectos de apps y aprendí cómo funciona el trabajo en equipo.",
       date: "2023",
     },
     {
       title: "Migración a SwiftUI",
       location: "Rijnsburg, Países Bajos",
-      description: "13 años — migré el desarrollo Apple a SwiftUI para mejorar la arquitectura de la app ScribbleLab.",
+      description: "13 años — migré el desarrollo Apple a SwiftUI para mejorar la arquitectura de la app.",
       date: "2023–2024",
     },
     {
@@ -436,15 +344,9 @@ export const experienceTranslations = {
       date: "2021",
     },
     {
-      title: "Next.js (프론트엔드)",
-      location: "레인스버그, 네덜란드",
-      description: "12살 — Next.js를 배워 현대적인 프론트엔드를 구축하고 웹 개발 실력을 향상시켰습니다.",
-      date: "2022",
-    },
-    {
       title: "Kotlin & Android",
       location: "레인스버그, 네덜란드",
-      description: "12살 — Android 개발을 위해 Kotlin을 시작했고, 이 지식은 ScribbleLab(공동 소유자) 같은 프로젝트에 도움이 되었습니다.",
+      description: "12살 — Android 개발을 위해 Kotlin을 시작했고, 나중에는 협업 프로젝트에서 이 지식을 활용했습니다.",
       date: "2022–2023",
     },
     {
@@ -460,15 +362,15 @@ export const experienceTranslations = {
       date: "2022–2023",
     },
     {
-      title: "ScribbleLab 합류",
+      title: "팀 협업",
       location: "레인스버그, 네덜란드",
-      description: "13살 — 개발자 Nevio Hirani와 연결되어 ScribbleLab에 공동 소유자/창립자로 기여했습니다.",
+      description: "13살 — 다른 개발자와 앱 프로젝트를 함께 진행하며 팀워크를 배웠습니다.",
       date: "2023",
     },
     {
       title: "SwiftUI로 이전",
       location: "레인스버그, 네덜란드",
-      description: "13살 — ScribbleLab의 앱 아키텍처를 개선하기 위해 Apple 개발을 SwiftUI로 이전했습니다.",
+      description: "13살 — 앱 아키텍처를 개선하기 위해 Apple 개발을 SwiftUI로 이전했습니다.",
       date: "2023–2024",
     },
     {

@@ -33,7 +33,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative border-2 border-black dark:border-white hover:translate-x-1 hover:translate-y-1 transition-transform"
+              className="group relative flex h-full flex-col border-2 border-black dark:border-white hover:translate-x-1 hover:translate-y-1 transition-transform"
             >
               <div className="relative overflow-hidden aspect-video bg-gray-100 dark:bg-gray-900 transition-all duration-300">
                       {project.imageUrl === "coming-soon" ? (
@@ -45,12 +45,12 @@ export default function Projects() {
                           src={project.imageUrl}
                           alt={content.title}
                           quality={95}
-                          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                          className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-300 bg-gray-100 dark:bg-gray-900"
                         />
                       )}
                     </div>
               
-              <div className="p-6 bg-white dark:bg-black transition-all duration-300">
+              <div className="flex flex-1 flex-col p-6 bg-white dark:bg-black transition-all duration-300">
                 <h3 className="text-2xl font-black mb-2">
                   {content.title}
                 </h3>
@@ -69,7 +69,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-3 text-sm font-medium">
+                <div className="mt-auto min-h-8 flex gap-3 text-sm font-medium">
                   {project.githubUrl === "coming-soon" ? (
                     <span className="text-gray-400">
                       {t.comingSoon}

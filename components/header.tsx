@@ -20,12 +20,14 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <div
-        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b-2 border-black dark:border-white max-w-7xl mx-auto transition-all duration-300 p-0 ${
+        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 border-2 border-black dark:border-white bg-white/65 dark:bg-black/65 backdrop-blur-xl shadow-lg shadow-black/5 max-w-7xl mx-auto transition-all duration-300 overflow-visible ${
           isMenuOpen ? "opacity-0 scale-95 h-12" : "opacity-100 scale-100 h-16"
         }`}
       >
         <nav className="h-full px-4 sm:px-8 flex items-center justify-between">
-          <div className="text-2xl font-black">KB</div>
+          <div className="flex h-10 w-10 items-center justify-center border-2 border-black dark:border-white bg-white/40 dark:bg-black/40 text-lg font-black tracking-tight backdrop-blur-sm">
+            KB
+          </div>
           
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-3">
@@ -55,18 +57,6 @@ export default function Header() {
               ))}
             </ul>
             <div className="h-6 w-px bg-gray-300 dark:bg-gray-700" />
-            <a
-              href="https://kilianbalaguer-blog.vercel.app"
-              className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all inline-flex items-center gap-1"
-            >
-              Blog <BsArrowRight className="text-xs" />
-            </a>
-            <a
-              href="https://kilianbalaguer-linkpage.vercel.app"
-              className="px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all inline-flex items-center gap-1"
-            >
-              Links <BsArrowRight className="text-xs" />
-            </a>
             <LanguageSwitch />
           </div>
 
@@ -111,7 +101,7 @@ function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMe
     <div className="fixed inset-0 z-[998] bg-white/95 dark:bg-black/95 backdrop-blur-sm p-6 md:hidden animate-expandFromTop">
       <div className="max-w-2xl mx-auto animate-slideDown">
         <div className="flex items-center justify-between mb-8">
-          <div className="text-2xl font-black">KB</div>
+          <div className="flex h-10 w-10 items-center justify-center border-2 border-black dark:border-white text-lg font-black">KB</div>
           <button 
             onClick={(e) => {
               setIsMenuOpen(false);
@@ -140,24 +130,6 @@ function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMe
               </a>
             </li>
           ))}
-          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + links.length * 0.1}s`, animationFillMode: "backwards" }}>
-            <a
-              href="https://kilianbalaguer-blog.vercel.app"
-              className="block text-2xl font-black hover:translate-x-2 transition-transform"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Blog <BsArrowRight className="inline text-base" />
-            </a>
-          </li>
-          <li className="animate-slideIn" style={{ animationDelay: `${0.2 + (links.length + 1) * 0.1}s`, animationFillMode: "backwards" }}>
-            <a
-              href="https://kilianbalaguer-linkpage.vercel.app"
-              className="block text-2xl font-black hover:translate-x-2 transition-transform"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Links <BsArrowRight className="inline text-base" />
-            </a>
-          </li>
         </ul>
       </div>
     </div>
