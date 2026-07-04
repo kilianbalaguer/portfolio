@@ -79,7 +79,7 @@ export const projectsData = [
     id: "voltaire",
     tags: ["Swift", "MLX", "iPhone", "iPad", "macOS", "Local AI"],
     imageUrl: "coming-soon",
-    githubUrl: "coming-soon",
+    githubUrl: "https://github.com/kilianbalaguer/Voltaire?tab=readme-ov-file",
     liveUrl: "coming-soon",
   },
 ] as const;
