@@ -82,7 +82,7 @@ export const projectsData = [
     githubUrl: "https://github.com/kilianbalaguer/Voltaire?tab=readme-ov-file",
     liveUrl: "coming-soon",
   },
-] as const;
+];
 
 export const skillsData = [
   "C++",
