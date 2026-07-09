@@ -41,11 +41,7 @@ export default function Intro() {
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
             {t.introDescription}
-          </p>
-          <p className="text-lg italic text-pink-600 dark:text-pink-400 mb-8 font-medium">
-            {t.introTaken}
-          </p>
-          
+          </p>   
           <div className="flex flex-wrap gap-4">
             <Link
               href="#contact"
