@@ -36,18 +36,14 @@ export default function Projects() {
               className="group relative flex h-full flex-col border-2 border-black dark:border-white hover:translate-x-1 hover:translate-y-1 transition-transform"
             >
               <div className="relative overflow-hidden aspect-video bg-gray-100 dark:bg-gray-900 transition-all duration-300">
-                      {project.imageUrl === "coming-soon" ? (
-                        <div className="w-full h-full flex items-center justify-center text-gray-600 dark:text-gray-300 bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-900 dark:to-gray-800">
-                          <span className="text-xl font-bold uppercase tracking-wide">{t.comingSoon}</span>
-                        </div>
-                      ) : (
                         <Image
                           src={project.imageUrl}
                           alt={content.title}
-                          quality={95}
-                          className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-300 bg-gray-100 dark:bg-gray-900"
+                          quality={75}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-contain object-bottom p-6 grayscale group-hover:grayscale-0 transition-all duration-300"
                         />
-                      )}
                     </div>
               
               <div className="flex flex-1 flex-col p-6 bg-white dark:bg-black transition-all duration-300">

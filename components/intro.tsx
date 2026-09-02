@@ -90,8 +90,9 @@ export default function Intro() {
               alt="Kilian Balaguer"
               width="400"
               height="400"
-              quality="95"
+              quality={75}
               priority={true}
+              sizes="(max-width: 768px) 100vw, 400px"
               className="relative w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
             />
           </div>

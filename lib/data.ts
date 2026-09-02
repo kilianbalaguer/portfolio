@@ -1,14 +1,12 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaRegFileCode } from "react-icons/fa";
-import { FaBook } from "react-icons/fa";
 import { FaFileCode } from "react-icons/fa6";
 import { GrAndroid } from "react-icons/gr";
 import { SiMacos } from "react-icons/si";
 import { FaWindows } from "react-icons/fa";
 import { SiXcode } from "react-icons/si";
-import rmtdevImg from "@/public/rmtdev.png";
+import { FaPlane } from "react-icons/fa";
 import areobrowserImg from "@/public/AeroBrowser.png";
+import voltaireImg from "@/public/voltaire-screenshot.png";
 export const links = [
   {
     name: "Home",
@@ -65,6 +63,10 @@ export const experiencesData = [
     icon: React.createElement(SiMacos),
     index: 6,
   },
+  {
+    icon: React.createElement(FaPlane),
+    index: 7,
+  },
 ] as const;
 
 export const projectsData = [
@@ -78,7 +80,7 @@ export const projectsData = [
   {
     id: "voltaire",
     tags: ["Swift", "MLX", "iPhone", "iPad", "macOS", "Local AI"],
-    imageUrl: "coming-soon",
+    imageUrl: voltaireImg,
     githubUrl: "https://github.com/kilianbalaguer/Voltaire?tab=readme-ov-file",
     liveUrl: "coming-soon",
   },

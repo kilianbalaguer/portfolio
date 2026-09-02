@@ -115,6 +115,12 @@ export const experienceTranslations = {
       description: "Age 14 — built my first Hackintosh; gained hardware and macOS experience.",
       date: "2024",
     },
+    {
+      title: "Moved to Marrakech",
+      location: "Marrakech, Morocco",
+      description: "Age 16 — relocated to Marrakech, Morocco. Continuing to build apps and explore new opportunities.",
+      date: "2026",
+    },
   ],
   fr: [
     {
@@ -158,6 +164,12 @@ export const experienceTranslations = {
       location: "Rijnsburg, Pays-Bas",
       description: "14 ans — j'ai construit mon premier Hackintosh ; j'ai gagné en expérience matériel et macOS.",
       date: "2024",
+    },
+    {
+      title: "Installation à Marrakech",
+      location: "Marrakech, Maroc",
+      description: "16 ans — installation à Marrakech, Maroc. Je continue à créer des apps et à explorer de nouvelles opportunités.",
+      date: "2026",
     },
   ],
   ar: [
@@ -203,6 +215,12 @@ export const experienceTranslations = {
       description: "14 سنة — بنيت أول Hackintosh لي؛ اكتسبت خبرة في الأجهزة و macOS.",
       date: "2024",
     },
+    {
+      title: "الانتقال إلى مراكش",
+      location: "مراكش، المغرب",
+      description: "16 سنة — انتقلت إلى مراكش، المغرب. أستمر في بناء التطبيقات واستكشاف فرص جديدة.",
+      date: "2026",
+    },
   ],
   nl: [
     {
@@ -246,6 +264,12 @@ export const experienceTranslations = {
       location: "Rijnsburg, Nederland",
       description: "14 jaar — ik bouwde mijn eerste Hackintosh; ik deed ervaring op met hardware en macOS.",
       date: "2024",
+    },
+    {
+      title: "Verhuizing naar Marrakech",
+      location: "Marrakech, Marokko",
+      description: "16 jaar — verhuisd naar Marrakech, Marokko. Blijf apps bouwen en nieuwe kansen verkennen.",
+      date: "2026",
     },
   ],
   de: [
@@ -291,6 +315,12 @@ export const experienceTranslations = {
       description: "14 Jahre — ich baute meinen ersten Hackintosh; ich sammelte Erfahrung mit Hardware und macOS.",
       date: "2024",
     },
+    {
+      title: "Umzug nach Marrakesch",
+      location: "Marrakesch, Marokko",
+      description: "16 Jahre — Umzug nach Marrakesch, Marokko. Entwickle weiterhin Apps und erkunde neue Möglichkeiten.",
+      date: "2026",
+    },
   ],
   es: [
     {
@@ -335,6 +365,12 @@ export const experienceTranslations = {
       description: "14 años — construí mi primer Hackintosh; gané experiencia en hardware y macOS.",
       date: "2024",
     },
+    {
+      title: "Mudanza a Marrakech",
+      location: "Marrakech, Marruecos",
+      description: "16 años — mudanza a Marrakech, Marruecos. Continúo creando apps y explorando nuevas oportunidades.",
+      date: "2026",
+    },
   ],
   ko: [
     {
@@ -378,6 +414,12 @@ export const experienceTranslations = {
       location: "레인스버그, 네덜란드",
       description: "14살 — 첫 Hackintosh를 제작했고 하드웨어 및 macOS 경험을 쌓았습니다.",
       date: "2024",
+    },
+    {
+      title: "마라케시로 이주",
+      location: "마라케시, 모로코",
+      description: "16살 — 모로코 마라케시로 이주했습니다. 앱을 계속 만들고 새로운 기회를 탐색하고 있습니다.",
+      date: "2026",
     },
   ],
 } as const;

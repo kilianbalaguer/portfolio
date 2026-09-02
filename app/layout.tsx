@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Kilian | Personal Portfolio",
-  description: "Kilian is a full-stack developer with 4 years of experience.",
+  description: "Kilian is a 16-year-old developer from France, building for iOS, macOS, and the web.",
   verification: {
     google: "gzKo8PYMPRyPu8x6X51ELGk86qyGfGRNpjGvgISgq3U",
   },
