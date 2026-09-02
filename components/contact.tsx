@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { useScrollReveal, useSectionInView } from "@/lib/hooks";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
+import { FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -84,24 +85,9 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="group flex items-center gap-2 border-2 border-black dark:border-white bg-black dark:bg-white text-white dark:text-black px-7 py-3 font-mono text-sm tracking-wide uppercase hover:translate-x-1 hover:translate-y-1 active:translate-x-0 active:translate-y-0 transition-all duration-300"
+              className="w-full px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-medium hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2"
             >
-              {t.send}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="group-hover:translate-x-1 transition-all"
-              >
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
+              {t.send} <FaPaperPlane className="text-xs" />
             </button>
           </form>
         </div>
