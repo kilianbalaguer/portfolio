@@ -10,8 +10,8 @@ export const translations = {
     
     // Intro
     introTitle: "Kilian Balaguer",
-    introSubtitle: "Full-Stack Developer & Maker",
-    introDescription: "I build apps, games, and websites with a focus on clean UX, smooth interactions, and practical details.",
+    introSubtitle: "iOS & macOS Developer / Full-Stack Developer",
+    introDescription: "I build things for iOS, macOS, and the web — and I love mixing technology with creativity.",
     introBadge: "DEVELOPER / CREATOR",
     introTaken: "Happily taken by a beautiful girl called Esmee 💕",
     getInTouch: "Get in touch",
@@ -19,15 +19,15 @@ export const translations = {
     
     // About
     aboutTitle: "About Me",
-    aboutP1: "Hey! I'm Kilian, a developer from the Netherlands. I started coding when I was 11 and have spent the last few years building apps, games, and websites that feel fast and useful.",
-    aboutP2: "When I'm not coding, I'm usually making music. I play piano, guitar, bass, and drums, and I also produce my own tracks. Music and code both reward rhythm, structure, and experimentation.",
-    aboutP3: "I also enjoy cooking and trying new ideas in the kitchen. Whether it's code, music, or food, I like making things that feel thoughtful and personal.",
+    aboutP1: "Hey! I'm Kilian, a 16-year-old developer from France, now based in Marrakech, Morocco. I started coding when I was 11 and have spent the last few years building apps, games, and websites that feel fast and useful.",
+    aboutP2: "I'm passionate about building clean, functional apps and tools. Whether it's SwiftUI, React, Kotlin, or experimenting with on-device AI — I enjoy the process of turning ideas into reality.",
+    aboutP3: "Outside of code, you'll find me playing piano, guitar, or drums, hitting the basketball court, or experimenting in the kitchen. I also enjoy chess and exploring hardware projects.",
     aboutMusic: "MUSIC",
-    aboutMusicText: "Piano • Guitar • Bass • Drums",
+    aboutMusicText: "Piano • Guitar • Drums",
     aboutInterests: "INTERESTS",
-    aboutInterestsText: "Cooking • Game Dev • Music Production",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • Local AI • Hardware • Basketball • Chess • Cooking",
     aboutAge: "AGE",
-    aboutAgeText: "15 years old",
+    aboutAgeText: "16 years old",
     
     // Projects
     projectsTitle: "My Projects",
@@ -69,8 +69,8 @@ export const translations = {
     
     // Intro
     introTitle: "Kilian Balaguer",
-    introSubtitle: "Développeur full-stack & créateur",
-    introDescription: "Je crée des applications, des jeux et des sites web en mettant l'accent sur une UX propre, des interactions fluides et des détails utiles.",
+    introSubtitle: "Développeur iOS & macOS / Full-Stack",
+    introDescription: "Je construis des choses pour iOS, macOS et le web — et j'adore mélanger technologie et créativité.",
     introBadge: "DÉVELOPPEUR / CRÉATEUR",
     introTaken: "Heureux d'être avec une belle fille appelée Esmee 💕",
     getInTouch: "Me contacter",
@@ -78,15 +78,15 @@ export const translations = {
     
     // About
     aboutTitle: "À propos de moi",
-    aboutP1: "Salut ! Je suis Kilian, un développeur des Pays-Bas. J'ai commencé à coder à 11 ans et j'ai passé ces dernières années à créer des applications, des jeux et des sites web rapides et utiles.",
-    aboutP2: "Quand je ne code pas, je fais généralement de la musique. Je joue du piano, de la guitare, de la basse et de la batterie, et je produis aussi mes propres morceaux. La musique et le code récompensent tous deux le rythme, la structure et l'expérimentation.",
-    aboutP3: "J'aime aussi cuisiner et essayer de nouvelles idées en cuisine. Que ce soit le code, la musique ou la nourriture, j'aime créer des choses réfléchies et personnelles.",
+    aboutP1: "Salut ! Je suis Kilian, un développeur de 16 ans originaire de France, maintenant basé à Marrakech, au Maroc. J'ai commencé à coder à 11 ans et j'ai passé ces dernières années à créer des applications, des jeux et des sites web rapides et utiles.",
+    aboutP2: "Je suis passionné par la création d'applications et d'outils propres et fonctionnels. Que ce soit SwiftUI, React, Kotlin ou l'expérimentation avec l'IA locale — j'aime le processus de transformer des idées en réalité.",
+    aboutP3: "En dehors du code, on me trouve au piano, à la guitare ou à la batterie, sur le terrain de basket, ou en train d'expérimenter en cuisine. J'aime aussi les échecs et explorer les projets matériels.",
     aboutMusic: "MUSIQUE",
-    aboutMusicText: "Piano • Guitare • Basse • Batterie",
+    aboutMusicText: "Piano • Guitare • Batterie",
     aboutInterests: "INTÉRÊTS",
-    aboutInterestsText: "Cuisine • Dev de Jeux • Production Musicale",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • IA Locale • Matériel • Basket • Échecs • Cuisine",
     aboutAge: "ÂGE",
-    aboutAgeText: "15 ans",
+    aboutAgeText: "16 ans",
     
     // Projects
     projectsTitle: "Mes Projets",
@@ -128,8 +128,8 @@ export const translations = {
     
     // Intro
     introTitle: "كيليان بالاغير",
-    introSubtitle: "مطور full-stack ومبدع",
-    introDescription: "أبني التطبيقات والألعاب والمواقع مع التركيز على تجربة استخدام نظيفة وتفاعلات سلسة وتفاصيل عملية.",
+    introSubtitle: "مطور iOS و macOS / مطور full-stack",
+    introDescription: "أبني أشياء لـ iOS وmacOS والويب — وأحب مزج التكنولوجيا بالإبداع.",
     introBadge: "مطور / مبدع",
     introTaken: "سعيد بأنني مع فتاة جميلة اسمها Esmee 💕",
     getInTouch: "تواصل معي",
@@ -137,15 +137,15 @@ export const translations = {
     
     // About
     aboutTitle: "نبذة عني",
-    aboutP1: "مرحباً! أنا كيليان، مطور من هولندا. بدأت البرمجة عندما كان عمري 11 سنة، وخلال السنوات الماضية كنت أبني تطبيقات وألعابًا ومواقع سريعة ومفيدة.",
-    aboutP2: "عندما لا أبرمج، فأنا غالبًا أصنع الموسيقى. أعزف على البيانو والجيتار والباس والطبول، وأنتج أيضًا مقطوعاتي الخاصة. الموسيقى والبرمجة يكافئان الإيقاع والبنية والتجريب.",
-    aboutP3: "أحب أيضًا الطبخ وتجربة أفكار جديدة في المطبخ. سواء كان ذلك برمجة أو موسيقى أو طعامًا، أحب صنع أشياء مدروسة وشخصية.",
+    aboutP1: "مرحباً! أنا كيليان، مطور في الـ 16 من عمري من فرنسا، أعيش الآن في مراكش، المغرب. بدأت البرمجة عندما كان عمري 11 سنة، وخلال السنوات الماضية كنت أبني تطبيقات وألعابًا ومواقع سريعة ومفيدة.",
+    aboutP2: "أنا شغوف ببناء تطبيقات وأدوات نظيفة وعملية. سواء كان ذلك SwiftUI أو React أو Kotlin أو التجربة مع الذكاء الاصطناعي المحلي — أحب عملية تحويل الأفكار إلى واقع.",
+    aboutP3: "خارج البرمجة، ستجدني أعزف البيانو أو الجيتار أو الطبول، أو على ملعب كرة السلة، أو أتجرب في المطبخ. أحب أيضًا الشطرنج واستكشاف المشاريع المادية.",
     aboutMusic: "الموسيقى",
-    aboutMusicText: "بيانو • جيتار • باس • طبول",
+    aboutMusicText: "بيانو • جيتار • طبول",
     aboutInterests: "اهتمامات",
-    aboutInterestsText: "الطبخ • تطوير الألعاب • إنتاج الموسيقى",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • الذكاء الاصطناعي المحلي • المادية • كرة السلة • الشطرنج • الطبخ",
     aboutAge: "العمر",
-    aboutAgeText: "15 سنة",
+    aboutAgeText: "16 سنة",
     
     // Projects
     projectsTitle: "مشاريعي",
@@ -187,8 +187,8 @@ export const translations = {
     
     // Intro
     introTitle: "Kilian Balaguer",
-    introSubtitle: "Full-stack ontwikkelaar & maker",
-    introDescription: "Ik bouw apps, games en websites met focus op een strakke UX, soepele interacties en praktische details.",
+    introSubtitle: "iOS & macOS Ontwikkelaar / Full-Stack Ontwikkelaar",
+    introDescription: "Ik bouw dingen voor iOS, macOS en het web — en ik hou ervan technologie en creativiteit te mengen.",
     introBadge: "ONTWIKKELAAR / MAKER",
     introTaken: "Gelukkig samen met een mooi meisje genaamd Esmee 💕",
     getInTouch: "Neem contact op",
@@ -196,15 +196,15 @@ export const translations = {
     
     // About
     aboutTitle: "Over Mij",
-    aboutP1: "Hey! Ik ben Kilian, een ontwikkelaar uit Nederland. Ik begon met coderen toen ik 11 was en heb de afgelopen jaren apps, games en websites gebouwd die snel en nuttig aanvoelen.",
-    aboutP2: "Als ik niet codeer, maak ik meestal muziek. Ik speel piano, gitaar, bas en drums, en ik produceer ook mijn eigen tracks. Muziek en code belonen allebei ritme, structuur en experimenteren.",
-    aboutP3: "Ik hou ook van koken en het uitproberen van nieuwe ideeën in de keuken. Of het nu code, muziek of eten is, ik maak graag dingen die doordacht en persoonlijk aanvoelen.",
+    aboutP1: "Hey! Ik ben Kilian, een 16-jarige ontwikkelaar uit Frankrijk, nu gevestigd in Marrakech, Marokko. Ik begon met coderen toen ik 11 was en heb de afgelopen jaren apps, games en websites gebouwd die snel en nuttig aanvoelen.",
+    aboutP2: "Ik ben gepassioneerd door het bouwen van schone, functionele apps en tools. Of het nu SwiftUI, React, Kotlin of experimenteren met lokale AI is — ik geniet van het proces om ideeën realiteit te maken.",
+    aboutP3: "Buiten de code vind je mij op piano, gitaar of drums, op het basketballveld, of aan het experimenteren in de keuken. Ik hou ook van schaken en het verkennen van hardware-projecten.",
     aboutMusic: "MUZIEK",
-    aboutMusicText: "Piano • Gitaar • Bas • Drums",
+    aboutMusicText: "Piano • Gitaar • Drums",
     aboutInterests: "INTERESSES",
-    aboutInterestsText: "Koken • Game Dev • Muziekproductie",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • Lokale AI • Hardware • Basketbal • Schaken • Koken",
     aboutAge: "LEEFTIJD",
-    aboutAgeText: "15 jaar oud",
+    aboutAgeText: "16 jaar oud",
     
     // Projects
     projectsTitle: "Mijn Projecten",
@@ -246,8 +246,8 @@ export const translations = {
     
     // Intro
     introTitle: "Kilian Balaguer",
-    introSubtitle: "Full-Stack-Entwickler & Macher",
-    introDescription: "Ich entwickle Apps, Spiele und Websites mit Fokus auf sauberes UX-Design, flüssige Interaktionen und praktische Details.",
+    introSubtitle: "iOS & macOS Entwickler / Full-Stack Entwickler",
+    introDescription: "Ich baue Dinge für iOS, macOS und das Web — und ich liebe es, Technologie und Kreativität zu vermischen.",
     introBadge: "ENTWICKLER / SCHÖPFER",
     introTaken: "Glücklich mit einem wunderschönen Mädchen namens Esmee 💕",
     getInTouch: "Kontakt aufnehmen",
@@ -255,15 +255,15 @@ export const translations = {
     
     // About
     aboutTitle: "Über Mich",
-    aboutP1: "Hey! Ich bin Kilian, ein Entwickler aus den Niederlanden. Ich habe mit 11 angefangen zu programmieren und baue seit einigen Jahren Apps, Spiele und Websites, die schnell und nützlich wirken.",
-    aboutP2: "Wenn ich nicht programmiere, mache ich meistens Musik. Ich spiele Klavier, Gitarre, Bass und Schlagzeug und produziere auch meine eigenen Tracks. Musik und Code belohnen beide Rhythmus, Struktur und Experimentieren.",
-    aboutP3: "Ich koche auch gern und probiere neue Ideen in der Küche aus. Ob Code, Musik oder Essen, ich erschaffe gern Dinge, die durchdacht und persönlich wirken.",
+    aboutP1: "Hey! Ich bin Kilian, ein 16-jähriger Entwickler aus Frankreich, jetzt ansässig in Marrakesch, Marokko. Ich habe mit 11 angefangen zu programmieren und baue seit einigen Jahren Apps, Spiele und Websites, die schnell und nützlich wirken.",
+    aboutP2: "Ich bin leidenschaftlich daran interessiert, saubere, funktionale Apps und Tools zu bauen. Ob SwiftUI, React, Kotlin oder das Experimentieren mit lokaler KI — ich genieße den Prozess, Ideen in die Realität umzusetzen.",
+    aboutP3: "Außerhalb des Codes findest du mich am Klavier, Gitarre oder Schlagzeug, auf dem Basketballplatz oder am Experimentieren in der Küche. Ich schaue auch gerne Schach und erkunde Hardware-Projekte.",
     aboutMusic: "MUSIK",
-    aboutMusicText: "Klavier • Gitarre • Bass • Schlagzeug",
+    aboutMusicText: "Klavier • Gitarre • Schlagzeug",
     aboutInterests: "INTERESSEN",
-    aboutInterestsText: "Kochen • Game Dev • Musikproduktion",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • Lokale KI • Hardware • Basketball • Schach • Kochen",
     aboutAge: "ALTER",
-    aboutAgeText: "15 Jahre alt",
+    aboutAgeText: "16 Jahre alt",
     
     // Projects
     projectsTitle: "Meine Projekte",
@@ -305,8 +305,8 @@ export const translations = {
     
     // Intro
     introTitle: "Kilian Balaguer",
-    introSubtitle: "Desarrollador full-stack y creador",
-    introDescription: "Construyo aplicaciones, juegos y sitios web con enfoque en una UX limpia, interacciones fluidas y detalles prácticos.",
+    introSubtitle: "Desarrollador iOS y macOS / Full-Stack",
+    introDescription: "Construyo cosas para iOS, macOS y la web — y me encanta mezclar tecnología con creatividad.",
     introBadge: "DESARROLLADOR / CREADOR",
     introTaken: "Felizmente junto a una hermosa chica llamada Esmee 💕",
     getInTouch: "Ponte en contacto",
@@ -314,15 +314,15 @@ export const translations = {
     
     // About
     aboutTitle: "Acerca de Mí",
-    aboutP1: "¡Hola! Soy Kilian, un desarrollador de los Países Bajos. Empecé a programar cuando tenía 11 años y en los últimos años he construido aplicaciones, juegos y sitios web que se sienten rápidos y útiles.",
-    aboutP2: "Cuando no estoy programando, normalmente estoy haciendo música. Toco piano, guitarra, bajo y batería, y también produzco mis propias pistas. La música y el código recompensan el ritmo, la estructura y la experimentación.",
-    aboutP3: "También me gusta cocinar y probar ideas nuevas en la cocina. Ya sea código, música o comida, me gusta crear cosas que se sientan pensadas y personales.",
+    aboutP1: "¡Hola! Soy Kilian, un desarrollador de 16 años de Francia, ahora radicado en Marrakech, Marruecos. Empecé a programar cuando tenía 11 años y en los últimos años he construido aplicaciones, juegos y sitios web que se sienten rápidos y útiles.",
+    aboutP2: "Me apasiona crear aplicaciones y herramientas limpias y funcionales. Ya sea SwiftUI, React, Kotlin o experimentar con IA local — disfruto del proceso de convertir ideas en realidad.",
+    aboutP3: "Fuera del código, me encontrarás tocando piano, guitarra o batería, en la cancha de baloncesto, o experimentando en la cocina. También me gusta el ajedrez y explorar proyectos de hardware.",
     aboutMusic: "MÚSICA",
-    aboutMusicText: "Piano • Guitarra • Bajo • Batería",
+    aboutMusicText: "Piano • Guitarra • Batería",
     aboutInterests: "INTERESES",
-    aboutInterestsText: "Cocina • Dev de Juegos • Producción Musical",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • IA Local • Hardware • Baloncesto • Ajedrez • Cocina",
     aboutAge: "EDAD",
-    aboutAgeText: "15 años",
+    aboutAgeText: "16 años",
     
     // Projects
     projectsTitle: "Mis Proyectos",
@@ -364,24 +364,24 @@ export const translations = {
     
     // Intro
     introTitle: "킬리안 발라게르",
-    introSubtitle: "풀스택 개발자 & 메이커",
-    introDescription: "깔끔한 UX, 부드러운 인터랙션, 실용적인 디테일에 집중해 앱, 게임, 웹사이트를 만듭니다.",
+    introSubtitle: "iOS & macOS 개발자 / 풀스택 개발자",
+    introDescription: "iOS, macOS, 웹을 위한 것들을 만들며 — 기술과 창의성을 섞는 것을 좋아합니다.",
     introBadge: "개발자 / 크리에이터",
-    introTaken: "아름다운 여자친구 알리샤와 행복합니다 💕",
+    introTaken: "아름다운 여자친구 Esmee와 행복합니다 💕",
     getInTouch: "연락하기",
     resume: "이력서",
     
     // About
     aboutTitle: "소개",
-    aboutP1: "안녕하세요! 저는 네덜란드의 개발자 킬리안입니다. 11살 때 코딩을 시작했고, 지난 몇 년 동안 빠르고 유용하게 느껴지는 앱, 게임, 웹사이트를 만들어왔습니다.",
-    aboutP2: "코딩하지 않을 때는 보통 음악을 만듭니다. 피아노, 기타, 베이스, 드럼을 연주하고 제 곡도 프로듀싱합니다. 음악과 코드는 둘 다 리듬, 구조, 실험을 보상합니다.",
-    aboutP3: "요리하고 주방에서 새로운 아이디어를 시험해 보는 것도 좋아합니다. 코드든, 음악이든, 음식이든, 저는 생각이 담기고 개인적인 느낌이 나는 것을 만드는 걸 좋아합니다.",
+    aboutP1: "안녕하세요! 저는 프랑스 출신의 16살 개발자 킬리안입니다. 현재 모로코 마라케시에 거주하고 있습니다. 11살 때 코딩을 시작했고, 지난 몇 년 동안 빠르고 유용하게 느껴지는 앱, 게임, 웹사이트를 만들어왔습니다.",
+    aboutP2: "깔끔하고 기능적인 앱과 도구를 만드는 것에 열정적입니다. SwiftUI, React, Kotlin, 또는 로컬 AI 실험이든 — 아이디어를 현실로 바꾸는 과정을 즐깁니다.",
+    aboutP3: "코드 외에는 피아노, 기타, 드럼을 연주하거나, 농구 코트에서, 또는 주방에서 실험하는 것을 발견할 수 있습니다. 체스와 하드웨어 프로젝트 탐구도 좋아합니다.",
     aboutMusic: "음악",
-    aboutMusicText: "피아노 • 기타 • 베이스 • 드럼",
+    aboutMusicText: "피아노 • 기타 • 드럼",
     aboutInterests: "관심사",
-    aboutInterestsText: "요리 • 게임 개발 • 음악 프로덕션",
+    aboutInterestsText: "SwiftUI • React • Next.js • Kotlin • 로컬 AI • 하드웨어 • 농구 • 체스 • 요리",
     aboutAge: "나이",
-    aboutAgeText: "15세",
+    aboutAgeText: "16세",
     
     // Projects
     projectsTitle: "내 프로젝트",
