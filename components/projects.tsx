@@ -18,9 +18,9 @@ export default function Projects() {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28 max-w-5xl w-full">
-      <div className="border-l-4 border-black dark:border-white pl-8 mb-12">
+      <div className="border-l-4 border-white pl-8 mb-12">
         <h2 className="text-5xl font-black mb-2">{t.projectsTitle}</h2>
-        <div className="h-1 w-24 bg-black dark:bg-white transition-all duration-300" />
+        <div className="h-1 w-24 bg-white transition-all duration-300" />
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -33,9 +33,9 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative flex h-full flex-col border-2 border-black dark:border-white hover:translate-x-1 hover:translate-y-1 transition-transform"
+              className="group relative flex h-full flex-col border-2 border-white hover:translate-x-1 hover:translate-y-1 transition-transform"
             >
-              <div className="relative overflow-hidden aspect-video bg-gray-100 dark:bg-gray-900 transition-all duration-300">
+              <div className="relative overflow-hidden aspect-video bg-gray-900 transition-all duration-300">
                         <Image
                           src={project.imageUrl}
                           alt={content.title}
@@ -46,11 +46,11 @@ export default function Projects() {
                         />
                     </div>
               
-              <div className="flex flex-1 flex-col p-6 bg-white dark:bg-black transition-all duration-300">
+              <div className="flex flex-1 flex-col p-6 bg-black transition-all duration-300">
                 <h3 className="text-2xl font-black mb-2">
                   {content.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+                <p className="text-gray-400 mb-4 text-sm">
                   {content.description}
                 </p>
                 
@@ -58,7 +58,7 @@ export default function Projects() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs font-mono px-2 py-1 bg-black dark:bg-white text-white dark:text-black transition-all duration-300"
+                      className="text-xs font-mono px-2 py-1 bg-white text-black transition-all duration-300"
                     >
                       {tag}
                     </span>

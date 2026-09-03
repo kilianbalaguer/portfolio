@@ -17,9 +17,9 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-5xl scroll-mt-28 sm:mb-40 w-full"
     >
-      <div className="border-l-4 border-black dark:border-white pl-8 mb-12">
+      <div className="border-l-4 border-white pl-8 mb-12">
         <h2 className="text-5xl font-black mb-2">{t.skillsTitle}</h2>
-        <div className="h-1 w-24 bg-black dark:bg-white transition-all duration-300" />
+        <div className="h-1 w-24 bg-white transition-all duration-300" />
       </div>
       
       <div className="flex flex-wrap gap-3">
@@ -27,7 +27,7 @@ export default function Skills() {
           <span
             key={skill}
             style={{ animationDelay: `${index * 0.03}s` }}
-            className="skill-tag px-4 py-2 border-2 border-black dark:border-white font-mono text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 cursor-default"
+            className="skill-tag px-4 py-2 border-2 border-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 cursor-default"
           >
             {skill}
           </span>

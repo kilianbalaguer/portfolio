@@ -17,7 +17,7 @@ export default function Footer() {
             href="https://github.com/kilianbalaguer"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-2xl"
+            className="text-gray-400 hover:text-white transition-colors text-2xl"
             aria-label="GitHub"
           >
             <FaGithub />

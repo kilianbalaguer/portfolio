@@ -16,11 +16,11 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40 max-w-5xl w-full">
-      <div className="border-l-4 border-black dark:border-white pl-8 mb-12">
+      <div className="border-l-4 border-white pl-8 mb-12">
         <h2 className="text-5xl font-black mb-2">
           {t.experienceTitle}
         </h2>
-        <div className="h-1 w-24 bg-black dark:bg-white transition-all duration-300" />
+        <div className="h-1 w-24 bg-white transition-all duration-300" />
       </div>
 
       <div className="space-y-8">
@@ -33,21 +33,21 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative pl-8 border-l-2 border-black dark:border-white"
+              className="relative pl-8 border-l-2 border-white"
             >
-              <div className="absolute -left-2 top-0 w-4 h-4 bg-black dark:bg-white transition-all duration-300" />
+              <div className="absolute -left-2 top-0 w-4 h-4 bg-white transition-all duration-300" />
               
               <div className="space-y-2">
-                <div className="font-mono text-sm text-gray-600 dark:text-gray-400">
+                <div className="font-mono text-sm text-gray-400">
                   {content.date}
                 </div>
                 <h3 className="text-2xl font-black">
                   {content.title}
                 </h3>
-                <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                <p className="text-sm font-medium text-gray-400">
                   {content.location}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {content.description}
                 </p>
               </div>
