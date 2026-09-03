@@ -2,30 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Performance optimizations */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  --line-color: #e5e7eb;
-  --bg-primary: #f8fafc;
-  --gradient-1: #fecaca;
-  --gradient-2: #ddd6fe;
-  --gradient-3: #bfdbfe;
-  --gradient-4: #ffffff;
-  --page-background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 45%, #fdf2f8 100%);
-}
-
-html.dark {
+:root {
   --line-color: rgba(255, 255, 255, 0.2);
   --bg-primary: #0f172a;
-  --gradient-1: #7f1d1d;
-  --gradient-2: #4c1d95;
-  --gradient-3: #1e3a8a;
-  --gradient-4: #020617;
   --page-background: linear-gradient(135deg, #020617 0%, #111827 45%, #1e1b4b 100%);
+  color-scheme: dark;
 }
 
 body {
@@ -37,30 +23,22 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.45), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.22), transparent 28%),
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.18), transparent 32%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.16), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.14), transparent 32%);
   animation: gradientPulse 12s ease-in-out infinite alternate;
   will-change: opacity;
   pointer-events: none;
   z-index: -20;
 }
 
-html.dark .animated-page-background::before {
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.16), transparent 28%),
-    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.14), transparent 32%);
-}
-
 .borderBlack {
-  @apply border border-black/10;
+  @apply border border-white/10;
 }
 
-/* Hardware acceleration for animations */
 @layer utilities {
   .bg-gradient-primary {
-    background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-2) 50%, var(--gradient-3) 100%);
+    background: linear-gradient(135deg, #7f1d1d 0%, #4c1d95 50%, #1e3a8a 100%);
   }
   
   .will-change-transform {
@@ -74,105 +52,32 @@ html.dark .animated-page-background::before {
   }
 }
 
-/* Mobile menu animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes rotate {
-  from {
-    opacity: 0;
-    transform: rotate(-90deg) scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
-  }
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes expandFromTop {
-  from {
-    opacity: 0;
-    clip-path: inset(0 0 100% 0);
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-}
-
-@keyframes navbarMorph {
-  0% {
-    height: 4rem;
-  }
-  100% {
-    height: 3rem;
-  }
-}
-
-@keyframes pageGradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pageGradientDrift {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+  from { opacity: 0; clip-path: inset(0 0 100% 0); transform: scaleY(0); transform-origin: top; }
+  to { opacity: 1; clip-path: inset(0 0 0 0); transform: scaleY(1); transform-origin: top; }
 }
 
 @keyframes gradientPulse {
-  0% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body,
   .animated-page-background::before,
   .skill-tag,
   .section-divider,
@@ -185,25 +90,13 @@ html.dark .animated-page-background::before {
 }
 
 @keyframes revealUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes revealLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .reveal-up,
@@ -232,23 +125,13 @@ html.dark .animated-page-background::before {
   animation: slideIn 0.4s ease-out;
 }
 
-.animate-rotate {
-  animation: rotate 0.3s ease-out;
-}
-
 .animate-expandFromTop {
   animation: expandFromTop 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes skillFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .skill-tag {
@@ -256,14 +139,8 @@ html.dark .animated-page-background::before {
 }
 
 @keyframes sectionDividerIn {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(100px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .section-divider {

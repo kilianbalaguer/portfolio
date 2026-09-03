@@ -20,12 +20,12 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <div
-        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 border-2 border-black dark:border-white bg-white/65 dark:bg-black/65 backdrop-blur-xl shadow-lg shadow-black/5 max-w-7xl mx-auto transition-all duration-300 overflow-visible ${
+        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 border-2 border-white bg-black/65 backdrop-blur-xl shadow-lg shadow-black/5 max-w-7xl mx-auto transition-all duration-300 overflow-visible ${
           isMenuOpen ? "opacity-0 scale-95 h-12" : "opacity-100 scale-100 h-16"
         }`}
       >
         <nav className="h-full px-4 sm:px-8 flex items-center justify-between">
-          <div className="flex h-10 w-10 items-center justify-center border-2 border-black dark:border-white bg-white/40 dark:bg-black/40 text-lg font-black tracking-tight backdrop-blur-sm">
+          <div className="flex h-10 w-10 items-center justify-center border-2 border-white bg-black/40 text-lg font-black tracking-tight backdrop-blur-sm">
             KB
           </div>
           
@@ -38,8 +38,8 @@ export default function Header() {
                     className={clsx(
                       "px-4 py-2 text-sm font-medium transition-all relative",
                       {
-                        "text-black dark:text-white": activeSection === link.name,
-                        "text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white": activeSection !== link.name,
+                        "text-white": activeSection === link.name,
+                        "text-gray-400 hover:text-white": activeSection !== link.name,
                       }
                     )}
                     href={link.hash}
@@ -50,13 +50,13 @@ export default function Header() {
                   >
                     {t[link.name.toLowerCase() as keyof typeof t] as string}
                     {link.name === activeSection && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black dark:bg-white"></span>
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"></span>
                     )}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="h-6 w-px bg-gray-300 dark:bg-gray-700" />
+            <div className="h-6 w-px bg-gray-700" />
             <LanguageSwitch />
           </div>
 
@@ -80,7 +80,7 @@ function MobileMenuButton({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; 
     <button
       onClick={() => setIsMenuOpen(!isMenuOpen)}
       aria-label="Toggle menu"
-      className={`w-10 h-10 bg-white dark:bg-black border-2 border-black dark:border-white md:hover:bg-black md:hover:text-white md:dark:hover:bg-white md:dark:hover:text-black active:scale-95 transition-all duration-300 font-medium flex items-center justify-center touch-manipulation ${
+      className={`w-10 h-10 bg-black border-2 border-white md:hover:bg-white md:hover:text-black active:scale-95 transition-all duration-300 font-medium flex items-center justify-center touch-manipulation ${
         isMenuOpen ? "rotate-90" : ""
       }`}
       aria-expanded={isMenuOpen}
@@ -98,17 +98,17 @@ function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMe
   if (!isMenuOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[998] bg-white/95 dark:bg-black/95 backdrop-blur-sm p-6 md:hidden animate-expandFromTop">
+    <div className="fixed inset-0 z-[998] bg-black/95 backdrop-blur-sm p-6 md:hidden animate-expandFromTop">
       <div className="max-w-2xl mx-auto animate-slideDown">
         <div className="flex items-center justify-between mb-8">
-          <div className="flex h-10 w-10 items-center justify-center border-2 border-black dark:border-white text-lg font-black">KB</div>
+          <div className="flex h-10 w-10 items-center justify-center border-2 border-white text-lg font-black">KB</div>
           <button 
             onClick={(e) => {
               setIsMenuOpen(false);
               e.currentTarget.blur();
             }} 
             aria-label="Close menu" 
-            className="w-10 h-10 bg-black dark:bg-white text-white dark:text-black active:scale-95 transition-all duration-300 text-2xl font-black touch-manipulation flex items-center justify-center border-2 border-black dark:border-white animate-rotate"
+            className="w-10 h-10 bg-white text-black active:scale-95 transition-all duration-300 text-2xl font-black touch-manipulation flex items-center justify-center border-2 border-white animate-rotate"
           >
             ✕
           </button>

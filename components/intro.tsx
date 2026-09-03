@@ -30,22 +30,22 @@ export default function Intro() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-block mb-4 px-4 py-1 bg-black dark:bg-white text-white dark:text-black text-sm font-mono transition-all duration-300">
+          <div className="inline-block mb-4 px-4 py-1 bg-white text-black text-sm font-mono transition-all duration-300">
             {t.introBadge}
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black mb-6 leading-tight">
             <span className="block">{t.introTitle}</span>
-            <span className="block text-2xl sm:text-3xl md:text-4xl font-medium italic text-gray-600 dark:text-gray-400 mt-2">
+            <span className="block text-2xl sm:text-3xl md:text-4xl font-medium italic text-gray-400 mt-2">
               {t.introSubtitle}
             </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-400 mb-8 leading-relaxed">
             {t.introDescription}
           </p>   
           <div className="flex flex-wrap gap-4">
             <Link
               href="#contact"
-              className="group px-4 sm:px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-medium hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="group px-4 sm:px-6 py-3 bg-white text-black font-medium hover:scale-105 transition-all duration-300 flex items-center gap-2"
               onClick={() => {
                 setActiveSection("Contact");
                 setTimeOfLastClick(Date.now());
@@ -56,7 +56,7 @@ export default function Intro() {
             </Link>
 
             <a
-              className="px-4 sm:px-6 py-3 border-2 border-black dark:border-white font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center gap-2"
+              className="px-4 sm:px-6 py-3 border-2 border-white font-medium hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2"
               href="/CV.html"
               download
             >
@@ -84,7 +84,7 @@ export default function Intro() {
           className="relative"
         >
           <div className="relative w-full aspect-square max-w-md mx-auto">
-            <div className="absolute inset-0 border-4 border-black dark:border-white translate-x-4 translate-y-4 transition-all duration-300" />
+            <div className="absolute inset-0 border-4 border-white translate-x-4 translate-y-4 transition-all duration-300" />
             <Image
               src="/KilianBalaguer.JPEG"
               alt="Kilian Balaguer"
