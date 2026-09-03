@@ -30,7 +30,6 @@ html.dark {
 
 body {
   background: var(--page-background);
-  contain: paint;
 }
 
 .animated-page-background::before {
