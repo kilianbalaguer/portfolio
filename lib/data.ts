@@ -1,4 +1,5 @@
 import React from "react";
+import type { StaticImageData } from "next/image";
 import { FaFileCode } from "react-icons/fa6";
 import { GrAndroid } from "react-icons/gr";
 import { SiMacos } from "react-icons/si";
@@ -69,7 +70,13 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
+export const projectsData: {
+  id: "aerobrowser" | "voltaire";
+  tags: string[];
+  imageUrl: StaticImageData;
+  githubUrl: string;
+  liveUrl: string;
+}[] = [
   {
     id: "aerobrowser",
     tags: ["Swift", "SwiftUI", "macOS", "iOS"],

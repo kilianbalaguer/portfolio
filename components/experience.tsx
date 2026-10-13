@@ -7,54 +7,75 @@ import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import { experienceTranslations } from "@/lib/content-translations";
 import { motion } from "framer-motion";
+import SectionHeading from "./section-heading";
+import Image from "next/image";
+import youngKilian from "@/public/kilian-age-11.jpg";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.3);
+  const { ref } = useSectionInView("Experience");
   const { language } = useLanguage();
   const t = translations[language];
   const experiences = experienceTranslations[language];
 
-  return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40 max-w-5xl w-full">
-      <div className="border-l-4 border-white pl-8 mb-12">
-        <h2 className="text-5xl font-black mb-2">
-          {t.experienceTitle}
-        </h2>
-        <div className="h-1 w-24 bg-white transition-all duration-300" />
-      </div>
+  // Newest first
+  const items = [...experiencesData].reverse();
 
-      <div className="space-y-8">
-        {experiencesData.map((item, index) => {
+  return (
+    <section id="experience" ref={ref} className="w-full max-w-5xl scroll-mt-28 py-20 sm:py-28">
+      <SectionHeading index="04">{t.experienceTitle}</SectionHeading>
+
+      <ol className="relative">
+        {items.map((item, i) => {
           const content = experiences[item.index];
           return (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="relative pl-8 border-l-2 border-white"
+            <motion.li
+              key={item.index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, ease: [0.2, 0.7, 0.2, 1] }}
+              className="group grid grid-cols-[2.5rem_1fr] gap-x-4 sm:grid-cols-[8rem_2.5rem_1fr] sm:gap-x-6"
             >
-              <div className="absolute -left-2 top-0 w-4 h-4 bg-white transition-all duration-300" />
-              
-              <div className="space-y-2">
-                <div className="font-mono text-sm text-gray-400">
-                  {content.date}
-                </div>
-                <h3 className="text-2xl font-black">
+              <div className="hidden pt-2.5 text-end font-mono text-xs text-zinc-500 sm:block">
+                {content.date}
+              </div>
+
+              <div className="relative flex justify-center">
+                {i !== items.length - 1 && (
+                  <span className="absolute top-11 bottom-0 w-px bg-white/10" />
+                )}
+                <span className="relative z-10 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-ink-900 text-zinc-400 transition-colors duration-300 group-hover:border-accent/50 group-hover:text-accent">
+                  {item.icon}
+                </span>
+              </div>
+
+              <div className="pb-10">
+                <div className="mb-1 font-mono text-xs text-zinc-500 sm:hidden">{content.date}</div>
+                <h3 className="pt-1.5 text-lg font-semibold tracking-tight text-white sm:text-xl">
                   {content.title}
                 </h3>
-                <p className="text-sm font-medium text-gray-400">
-                  {content.location}
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  {content.description}
-                </p>
+                <p className="mb-2 text-xs text-zinc-500">{content.location}</p>
+                <p className="max-w-xl text-sm leading-relaxed text-zinc-400">{content.description}</p>
+
+                {item.index === 0 && (
+                  <figure className="mt-5 w-full max-w-[17rem] rotate-[-1.5deg] rounded-3xl border border-white/10 bg-ink-850 p-2 shadow-2xl shadow-black/40 transition-transform duration-500 hover:rotate-0 rtl:rotate-[1.5deg]">
+                    <Image
+                      src={youngKilian}
+                      alt="Kilian at 11, in front of a wall of computer motherboards"
+                      placeholder="blur"
+                      sizes="272px"
+                      className="aspect-[4/5] w-full rounded-[1.1rem] object-cover"
+                    />
+                    <figcaption className="px-2 pb-1.5 pt-3 text-xs leading-relaxed text-zinc-400">
+                      {t.startedCaption}
+                    </figcaption>
+                  </figure>
+                )}
               </div>
-            </motion.div>
+            </motion.li>
           );
         })}
-      </div>
+      </ol>
     </section>
   );
 }

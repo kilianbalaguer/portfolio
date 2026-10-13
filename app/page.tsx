@@ -1,18 +1,14 @@
 import Intro from "@/components/intro";
-import SectionDivider from "@/components/section-divider";
-import dynamic from "next/dynamic";
-
-const About = dynamic(() => import("@/components/about"));
-const Projects = dynamic(() => import("@/components/projects"));
-const Skills = dynamic(() => import("@/components/skills"));
-const Experience = dynamic(() => import("@/components/experience"));
-const Contact = dynamic(() => import("@/components/contact"));
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex flex-col items-center px-4 sm:px-6">
       <Intro />
-      <SectionDivider />
       <About />
       <Projects />
       <Skills />

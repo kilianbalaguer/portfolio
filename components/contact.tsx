@@ -5,6 +5,11 @@ import { useScrollReveal, useSectionInView } from "@/lib/hooks";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import { FaPaperPlane } from "react-icons/fa";
+import { HiOutlineClipboardDocument } from "react-icons/hi2";
+import toast from "react-hot-toast";
+import SectionHeading from "./section-heading";
+
+export const EMAIL = "kilianbalaguer4@icloud.com";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -18,79 +23,103 @@ export default function Contact() {
     const form = formRef.current;
     if (!form) return;
 
-    const name = (form.elements.namedItem("senderName") as HTMLInputElement)?.value || "";
-    const email = (form.elements.namedItem("senderEmail") as HTMLInputElement)?.value || "";
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || "";
+    const data = new FormData(form);
+    const name = String(data.get("senderName") ?? "");
+    const email = String(data.get("senderEmail") ?? "");
+    const message = String(data.get("message") ?? "");
 
     const body = `From: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href = `mailto:kilianbalaguer67@icloud.com?subject=${encodeURIComponent(`Portfolio message from ${name}`)}&body=${encodeURIComponent(body)}`;
+    window.umami?.track("contact-submit");
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(`Portfolio message from ${name}`)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      toast.success(t.emailCopied);
+      window.umami?.track("email-copy");
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
   };
 
   return (
-    <section id="contact" ref={ref} className="mb-28 sm:mb-40 w-full max-w-5xl scroll-mt-28">
-      <div ref={revealRef} className={`reveal-up ${revealClass}`}>
-        <div className="border-l-4 border-white pl-8 mb-12">
-          <h2 className="text-5xl font-black mb-2">
-            {t.contact}
-          </h2>
-          <div className="h-1 w-24 bg-white transition-all duration-300" />
-        </div>
+    <section id="contact" ref={ref} className="w-full max-w-5xl scroll-mt-28 py-20 sm:py-28">
+      <SectionHeading index="05">{t.contact}</SectionHeading>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <p className="text-xl text-gray-300 leading-relaxed">
-              {t.contactDescription}
-            </p>
-            
-            <div className="space-y-3">
-              <div>
-                <div className="font-black text-sm mb-1 tracking-wider">{t.contactEmail}</div>
-                <a 
-                  href="mailto:kilianbalaguer67@icloud.com"
-                  className="text-gray-300 hover:underline"
-                >
-                  kilianbalaguer67@icloud.com
-                </a>
-              </div>
+      <div ref={revealRef} className={`card grid gap-10 p-7 sm:p-10 md:grid-cols-[1fr_1.1fr] ${revealClass}`}>
+        <div className="flex flex-col">
+          <p className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+            {t.contactHeadline}
+          </p>
+          <p className="mt-4 text-zinc-400">{t.contactDescription}</p>
+
+          <div className="mt-8 md:mt-auto">
+            <div className="mb-2 font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+              {t.contactEmail}
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <a
+                href={`mailto:${EMAIL}`}
+                data-umami-event="email-click"
+                className="break-all text-lg text-white underline decoration-white/20 underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                {EMAIL}
+              </a>
+              <button
+                type="button"
+                onClick={copyEmail}
+                aria-label={t.copyEmail}
+                title={t.copyEmail}
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
+              >
+                <HiOutlineClipboardDocument />
+              </button>
             </div>
           </div>
+        </div>
 
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="space-y-4"
-          >
-            <input
-              className="w-full px-4 py-3 border-2 border-white bg-black focus:outline-none font-mono text-sm placeholder-gray-500 transition-all duration-300"
-              name="senderName"
-              type="text"
-              required
-              maxLength={100}
-              placeholder={t.namePlaceholder}
-            />
-            <input
-              className="w-full px-4 py-3 border-2 border-white bg-black focus:outline-none font-mono text-sm placeholder-gray-500 transition-all duration-300"
-              name="senderEmail"
-              type="email"
-              required
-              maxLength={500}
-              placeholder={t.emailPlaceholder}
-            />
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className="block">
+              <span className="sr-only">{t.namePlaceholder}</span>
+              <input
+                className="field"
+                name="senderName"
+                type="text"
+                autoComplete="name"
+                required
+                maxLength={100}
+                placeholder={t.namePlaceholder}
+              />
+            </label>
+            <label className="block">
+              <span className="sr-only">{t.emailPlaceholder}</span>
+              <input
+                className="field"
+                name="senderEmail"
+                type="email"
+                autoComplete="email"
+                required
+                maxLength={500}
+                placeholder={t.emailPlaceholder}
+              />
+            </label>
+          </div>
+          <label className="block">
+            <span className="sr-only">{t.messagePlaceholder}</span>
             <textarea
-              className="w-full h-40 px-4 py-3 border-2 border-white bg-black focus:outline-none resize-none font-mono text-sm placeholder-gray-500 transition-all duration-300"
+              className="field h-44 resize-none"
               name="message"
               placeholder={t.messagePlaceholder}
               required
               maxLength={5000}
             />
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-white text-black font-medium hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              {t.send} <FaPaperPlane className="text-xs" />
-            </button>
-          </form>
-        </div>
+          </label>
+          <button type="submit" className="btn-primary w-full">
+            {t.send} <FaPaperPlane className="text-xs rtl:-scale-x-100" />
+          </button>
+        </form>
       </div>
     </section>
   );

@@ -2,147 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: #09090a;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --line-color: rgba(255, 255, 255, 0.2);
-  --bg-primary: #0f172a;
-  --page-background: linear-gradient(135deg, #020617 0%, #111827 45%, #1e1b4b 100%);
-  color-scheme: dark;
+::selection {
+  background: rgba(255, 107, 61, 0.35);
+  color: #fff;
 }
 
-body {
-  background: var(--page-background);
-}
-
-.animated-page-background::before {
-  content: "";
-  position: fixed;
-  inset: 0;
+/* Soft background glows + faint grid, fixed behind everything */
+.page-glow {
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.16), transparent 28%),
-    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.14), transparent 32%);
-  animation: gradientPulse 12s ease-in-out infinite alternate;
-  will-change: opacity;
-  pointer-events: none;
-  z-index: -20;
+    radial-gradient(60rem 40rem at 85% -10%, rgba(255, 107, 61, 0.12), transparent 60%),
+    radial-gradient(50rem 35rem at -10% 30%, rgba(99, 102, 241, 0.08), transparent 60%);
 }
 
-.borderBlack {
-  @apply border border-white/10;
+.page-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+  mask-image: radial-gradient(ellipse at top, black 20%, transparent 70%);
 }
 
-@layer utilities {
-  .bg-gradient-primary {
-    background: linear-gradient(135deg, #7f1d1d 0%, #4c1d95 50%, #1e3a8a 100%);
+@layer components {
+  .card {
+    @apply rounded-3xl border border-white/[0.07] bg-ink-900/70 backdrop-blur-sm;
   }
-  
-  .will-change-transform {
-    will-change: transform;
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
   }
-  
-  .gpu-accelerated {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+
+  .btn-primary {
+    @apply btn bg-white text-ink-950 hover:bg-accent hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/15 text-white hover:border-white/40 hover:bg-white/5;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3.5 text-sm text-white placeholder-zinc-500 transition-colors focus:border-accent/60 focus:bg-white/[0.05] focus:outline-none;
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Scroll reveal (driven by useScrollReveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes expandFromTop {
-  from { opacity: 0; clip-path: inset(0 0 100% 0); transform: scaleY(0); transform-origin: top; }
-  to { opacity: 1; clip-path: inset(0 0 0 0); transform: scaleY(1); transform-origin: top; }
-}
-
-@keyframes gradientPulse {
-  0% { opacity: 0.6; }
-  100% { opacity: 1; }
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animated-page-background::before,
-  .skill-tag,
-  .section-divider,
-  .reveal-up,
-  .reveal-left {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
+  html {
+    scroll-behavior: auto !important;
   }
-}
 
-@keyframes revealUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 
-@keyframes revealLeft {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.reveal-up,
-.reveal-left {
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.reveal-up.revealed {
-  animation: revealUp 0.5s ease-out forwards;
-}
-
-.reveal-left.revealed {
-  animation: revealLeft 0.5s ease-out forwards;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.2s ease-out;
-}
-
-.animate-slideDown {
-  animation: slideDown 0.4s ease-out 0.1s backwards;
-}
-
-.animate-slideIn {
-  animation: slideIn 0.4s ease-out;
-}
-
-.animate-expandFromTop {
-  animation: expandFromTop 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes skillFadeIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.skill-tag {
-  animation: skillFadeIn 0.3s ease-out both;
-}
-
-@keyframes sectionDividerIn {
-  from { opacity: 0; transform: translateY(100px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.section-divider {
-  animation: sectionDividerIn 0.4s ease-out 0.125s both;
+  .animate-marquee,
+  .animate-pulseDot {
+    animation: none !important;
+  }
 }

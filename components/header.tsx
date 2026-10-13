@@ -1,137 +1,135 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { links } from "@/lib/data";
-import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import LanguageSwitch from "./language-switch";
-import { BsArrowRight } from "react-icons/bs";
+import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
-  const { language } = useLanguage();
-  const t = translations[language];
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="z-[999] relative">
-      <div
-        className={`fixed top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 border-2 border-white bg-black/65 backdrop-blur-xl shadow-lg shadow-black/5 max-w-7xl mx-auto transition-all duration-300 overflow-visible ${
-          isMenuOpen ? "opacity-0 scale-95 h-12" : "opacity-100 scale-100 h-16"
-        }`}
-      >
-        <nav className="h-full px-4 sm:px-8 flex items-center justify-between">
-          <div className="flex h-10 w-10 items-center justify-center border-2 border-white bg-black/40 text-lg font-black tracking-tight backdrop-blur-sm">
-            KB
-          </div>
-          
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-3">
-            <ul className="flex items-center gap-1">
-              {links.map((link) => (
-                <li key={link.hash}>
-                  <Link
-                    className={clsx(
-                      "px-4 py-2 text-sm font-medium transition-all relative",
-                      {
-                        "text-white": activeSection === link.name,
-                        "text-gray-400 hover:text-white": activeSection !== link.name,
-                      }
-                    )}
-                    href={link.hash}
-                    onClick={() => {
-                      setActiveSection(link.name);
-                      setTimeOfLastClick(Date.now());
-                    }}
-                  >
-                    {t[link.name.toLowerCase() as keyof typeof t] as string}
-                    {link.name === activeSection && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"></span>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="h-6 w-px bg-gray-700" />
-            <LanguageSwitch />
-          </div>
-
-          {/* Mobile controls */}
-          <div className="md:hidden flex items-center gap-2">
-            <div className="relative">
-              <LanguageSwitch />
-            </div>
-            <MobileMenuButton isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-          </div>
-        </nav>
-      </div>
-      {/* Mobile nav overlay (renders outside the fixed bar) */}
-      <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-    </header>
-  );
-}
-
-function MobileMenuButton({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (value: boolean) => void }) {
-  return (
-    <button
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-      aria-label="Toggle menu"
-      className={`w-10 h-10 bg-black border-2 border-white md:hover:bg-white md:hover:text-black active:scale-95 transition-all duration-300 font-medium flex items-center justify-center touch-manipulation ${
-        isMenuOpen ? "rotate-90" : ""
-      }`}
-      aria-expanded={isMenuOpen}
-    >
-      <span className="text-xl font-black leading-none">☰</span>
-    </button>
-  );
-}
-
-function MobileNav({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (value: boolean) => void }) {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { language } = useLanguage();
   const t = translations[language];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  if (!isMenuOpen) return null;
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Lock page scroll and allow Escape while the mobile menu is open
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsMenuOpen(false);
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isMenuOpen]);
+
+  const go = (name: (typeof links)[number]["name"]) => {
+    setActiveSection(name);
+    setTimeOfLastClick(Date.now());
+    setIsMenuOpen(false);
+  };
 
   return (
-    <div className="fixed inset-0 z-[998] bg-black/95 backdrop-blur-sm p-6 md:hidden animate-expandFromTop">
-      <div className="max-w-2xl mx-auto animate-slideDown">
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex h-10 w-10 items-center justify-center border-2 border-white text-lg font-black">KB</div>
-          <button 
-            onClick={(e) => {
-              setIsMenuOpen(false);
-              e.currentTarget.blur();
-            }} 
-            aria-label="Close menu" 
-            className="w-10 h-10 bg-white text-black active:scale-95 transition-all duration-300 text-2xl font-black touch-manipulation flex items-center justify-center border-2 border-white animate-rotate"
-          >
-            ✕
-          </button>
-        </div>
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-5">
+      <nav
+        aria-label="Main"
+        className={clsx(
+          "flex w-full max-w-5xl items-center justify-between rounded-full border py-2 pe-2 ps-3 transition-all duration-500",
+          scrolled
+            ? "border-white/10 bg-ink-950/75 shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+            : "border-transparent bg-transparent"
+        )}
+      >
+        <a
+          href="#home"
+          onClick={() => go("Home")}
+          className="flex items-center gap-2.5 rounded-full pe-2 font-medium tracking-tight"
+          aria-label="Kilian Balaguer — home"
+        >
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-sm font-semibold text-ink-950">
+            KB
+          </span>
+          <span className="hidden text-sm sm:inline">Kilian Balaguer</span>
+        </a>
 
-        <ul className="flex flex-col gap-6">
-          {links.map((link, index) => (
-            <li key={link.hash} className="animate-slideIn" style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: "backwards" }}>
+        <ul className="hidden items-center gap-1 md:flex">
+          {links.slice(1).map((link) => (
+            <li key={link.hash}>
               <a
                 href={link.hash}
-                onClick={(e) => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                  setIsMenuOpen(false);
-                }}
-                className="block text-2xl font-black hover:translate-x-2 transition-transform"
+                onClick={() => go(link.name)}
+                aria-current={activeSection === link.name ? "true" : undefined}
+                className={clsx(
+                  "relative rounded-full px-3.5 py-2 text-sm transition-colors",
+                  activeSection === link.name
+                    ? "bg-white/10 text-white"
+                    : "text-zinc-400 hover:text-white"
+                )}
               >
-                {t[link.name.toLowerCase() as keyof typeof t] as string}
+                {t[link.name.toLowerCase() as keyof typeof t]}
               </a>
             </li>
           ))}
         </ul>
-      </div>
-    </div>
+
+        <div className="flex items-center gap-2">
+          <LanguageSwitch />
+          <a
+            href="#contact"
+            onClick={() => go("Contact")}
+            data-umami-event="nav-cta"
+            className="btn-primary hidden !px-4 !py-2 md:inline-flex"
+          >
+            {t.getInTouch}
+          </a>
+          <button
+            onClick={() => setIsMenuOpen((open) => !open)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-xl md:hidden"
+          >
+            {isMenuOpen ? <HiX /> : <HiOutlineMenuAlt4 />}
+          </button>
+        </div>
+      </nav>
+
+      {isMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="fixed inset-x-4 top-20 rounded-3xl border border-white/10 bg-ink-900/95 p-3 shadow-2xl backdrop-blur-xl md:hidden"
+        >
+          <ul className="flex flex-col">
+            {links.map((link, index) => (
+              <li key={link.hash}>
+                <a
+                  href={link.hash}
+                  onClick={() => go(link.name)}
+                  className={clsx(
+                    "flex items-center justify-between rounded-2xl px-4 py-3.5 text-lg transition-colors",
+                    activeSection === link.name ? "bg-white/10 text-white" : "text-zinc-300"
+                  )}
+                >
+                  {t[link.name.toLowerCase() as keyof typeof t]}
+                  <span className="font-mono text-xs text-zinc-500">0{index}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </header>
   );
 }

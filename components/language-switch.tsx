@@ -1,74 +1,74 @@
 "use client";
 
-import { useLanguage } from "@/context/language-context";
-import React from "react";
-import { motion } from "framer-motion";
-
-const languages = [
-  { code: "en" as const, flag: "🇬🇧", name: "English" },
-  { code: "fr" as const, flag: "🇫🇷", name: "Français" },
-  { code: "ar" as const, flag: "🇸🇦", name: "العربية" },
-  { code: "nl" as const, flag: "🇳🇱", name: "Nederlands" },
-  { code: "de" as const, flag: "🇩🇪", name: "Deutsch" },
-  { code: "es" as const, flag: "🇪🇸", name: "Español" },
-  { code: "ko" as const, flag: "🇰🇷", name: "한국어" },
-];
+import { languages, useLanguage } from "@/context/language-context";
+import React, { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
+import { HiCheck } from "react-icons/hi";
 
 export default function LanguageSwitch() {
   const { language, setLanguage } = useLanguage();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
-  const currentLanguage = languages.find((lang) => lang.code === language);
+  const current = languages.find((lang) => lang.code === language);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onPointer = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setIsOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false);
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [isOpen]);
 
   return (
-    <div className="relative z-[1000]">
+    <div ref={rootRef} className="relative">
       <button
-        className={`flex items-center gap-2 w-8 h-8 justify-center border-2 border-white md:hover:bg-white md:hover:text-black active:scale-95 transition-all font-medium touch-manipulation ${
-          isOpen 
-            ? "bg-white text-black" 
-            : "bg-black"
-        }`}
-        onClick={(e) => {
-          setIsOpen(!isOpen);
-          e.currentTarget.blur();
-        }}
+        className={clsx(
+          "flex h-10 items-center gap-1.5 rounded-full border px-3 text-xs font-medium uppercase tracking-wider transition-colors",
+          isOpen ? "border-white/30 bg-white/10" : "border-white/10 bg-white/5 hover:border-white/25"
+        )}
+        onClick={() => setIsOpen((open) => !open)}
         aria-label="Select language"
+        aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
-        <span className="text-lg">{currentLanguage?.flag}</span>
+        <span className="text-base leading-none">{current?.flag}</span>
+        {current?.code}
       </button>
 
       {isOpen && (
-        <>
-          <div
-            className="fixed inset-0 z-10"
-            onClick={() => setIsOpen(false)}
-          />
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="absolute right-0 md:right-0 md:left-auto left-auto mt-2 py-0 w-48 bg-black/90 backdrop-blur-xl border-2 border-white z-[1001] shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
-          >
-            {languages.map((lang, index) => (
+        <ul
+          role="listbox"
+          aria-label="Language"
+          className="absolute end-0 mt-2 w-48 overflow-hidden rounded-2xl border border-white/10 bg-ink-900/95 p-1.5 shadow-2xl backdrop-blur-xl"
+        >
+          {languages.map((lang) => (
+            <li key={lang.code} role="option" aria-selected={language === lang.code}>
               <button
-                key={lang.code}
-                onClick={(e) => {
+                onClick={() => {
                   setLanguage(lang.code);
                   setIsOpen(false);
-                  e.currentTarget.blur();
                 }}
-                className={`w-full px-4 py-3 text-left flex items-center gap-3 md:hover:bg-white md:hover:text-black active:brightness-90 transition-colors font-medium touch-manipulation ${
-                  language === lang.code
-                    ? "bg-white text-black"
-                    : "text-gray-300"
-                } ${index !== languages.length - 1 ? "border-b border-gray-700" : ""}`}
+                data-umami-event="language-change"
+                data-umami-event-language={lang.code}
+                className={clsx(
+                  "flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-start text-sm transition-colors",
+                  language === lang.code ? "bg-white/10 text-white" : "text-zinc-300 hover:bg-white/5"
+                )}
               >
-                <span className="text-lg">{lang.flag}</span>
-                <span className="text-sm">{lang.name}</span>
+                <span className="text-base">{lang.flag}</span>
+                <span className="flex-1">{lang.name}</span>
+                {language === lang.code && <HiCheck className="text-accent" />}
               </button>
-            ))}
-          </motion.div>
-        </>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

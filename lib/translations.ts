@@ -13,9 +13,7 @@ export const translations = {
     introSubtitle: "iOS & macOS Developer / Full-Stack Developer",
     introDescription: "I build things for iOS, macOS, and the web — and I love mixing technology with creativity.",
     introBadge: "DEVELOPER / CREATOR",
-    introTaken: "Happily taken by a beautiful girl called Esmee 💕",
     getInTouch: "Get in touch",
-    resume: "Resume",
     
     // About
     aboutTitle: "About Me",
@@ -57,6 +55,18 @@ export const translations = {
     footerRights: "All rights reserved.",
     footerAbout: "About this site",
     footerTech: "Built with React, Next.js, TypeScript, Tailwind CSS, Framer Motion, and hosted on Vercel.",
+
+    // Redesign
+    statusAvailable: "Open to new projects",
+    basedIn: "Based in Marrakech, Morocco",
+    codingSince: "Coding since 2021",
+    aboutLocation: "LOCATION",
+    aboutLocationText: "Marrakech, Morocco",
+    copyEmail: "Copy email",
+    emailCopied: "Email copied",
+    contactHeadline: "Let's build something together.",
+    backToTop: "Back to top",
+    startedCaption: "Me at 11 — around when I fell for tech and wrote my first lines of code.",
   },
   fr: {
     // Navbar
@@ -72,9 +82,7 @@ export const translations = {
     introSubtitle: "Développeur iOS & macOS / Full-Stack",
     introDescription: "Je construis des choses pour iOS, macOS et le web — et j'adore mélanger technologie et créativité.",
     introBadge: "DÉVELOPPEUR / CRÉATEUR",
-    introTaken: "Heureux d'être avec une belle fille appelée Esmee 💕",
     getInTouch: "Me contacter",
-    resume: "CV",
     
     // About
     aboutTitle: "À propos de moi",
@@ -116,6 +124,18 @@ export const translations = {
     footerRights: "Tous droits réservés.",
     footerAbout: "À propos de ce site",
     footerTech: "Construit avec React, Next.js, TypeScript, Tailwind CSS, Framer Motion, et hébergé sur Vercel.",
+
+    // Redesign
+    statusAvailable: "Ouvert à de nouveaux projets",
+    basedIn: "Basé à Marrakech, Maroc",
+    codingSince: "Je code depuis 2021",
+    aboutLocation: "LIEU",
+    aboutLocationText: "Marrakech, Maroc",
+    copyEmail: "Copier l'email",
+    emailCopied: "Email copié",
+    contactHeadline: "Construisons quelque chose ensemble.",
+    backToTop: "Retour en haut",
+    startedCaption: "Moi à 11 ans — à l'époque où je me suis passionné pour la tech et où j'ai écrit mes premières lignes de code.",
   },
   ar: {
     // Navbar
@@ -131,9 +151,7 @@ export const translations = {
     introSubtitle: "مطور iOS و macOS / مطور full-stack",
     introDescription: "أبني أشياء لـ iOS وmacOS والويب — وأحب مزج التكنولوجيا بالإبداع.",
     introBadge: "مطور / مبدع",
-    introTaken: "سعيد بأنني مع فتاة جميلة اسمها Esmee 💕",
     getInTouch: "تواصل معي",
-    resume: "السيرة الذاتية",
     
     // About
     aboutTitle: "نبذة عني",
@@ -175,6 +193,18 @@ export const translations = {
     footerRights: "جميع الحقوق محفوظة.",
     footerAbout: "حول هذا الموقع",
     footerTech: "تم البناء باستخدام React و Next.js و TypeScript و Tailwind CSS و Framer Motion، واستضافته على Vercel.",
+
+    // Redesign
+    statusAvailable: "متاح لمشاريع جديدة",
+    basedIn: "مقيم في مراكش، المغرب",
+    codingSince: "أبرمج منذ 2021",
+    aboutLocation: "الموقع",
+    aboutLocationText: "مراكش، المغرب",
+    copyEmail: "نسخ البريد",
+    emailCopied: "تم نسخ البريد",
+    contactHeadline: "لنبنِ شيئاً معاً.",
+    backToTop: "العودة للأعلى",
+    startedCaption: "أنا في سن 11 — حين بدأ شغفي بالتقنية وكتبت أول أسطر برمجية.",
   },
   nl: {
     // Navbar
@@ -190,9 +220,7 @@ export const translations = {
     introSubtitle: "iOS & macOS Ontwikkelaar / Full-Stack Ontwikkelaar",
     introDescription: "Ik bouw dingen voor iOS, macOS en het web — en ik hou ervan technologie en creativiteit te mengen.",
     introBadge: "ONTWIKKELAAR / MAKER",
-    introTaken: "Gelukkig samen met een mooi meisje genaamd Esmee 💕",
     getInTouch: "Neem contact op",
-    resume: "CV",
     
     // About
     aboutTitle: "Over Mij",
@@ -234,6 +262,18 @@ export const translations = {
     footerRights: "Alle rechten voorbehouden.",
     footerAbout: "Over deze site",
     footerTech: "Gebouwd met React, Next.js, TypeScript, Tailwind CSS, Framer Motion, en gehost op Vercel.",
+
+    // Redesign
+    statusAvailable: "Open voor nieuwe projecten",
+    basedIn: "Gevestigd in Marrakech, Marokko",
+    codingSince: "Programmeert sinds 2021",
+    aboutLocation: "LOCATIE",
+    aboutLocationText: "Marrakech, Marokko",
+    copyEmail: "E-mail kopiëren",
+    emailCopied: "E-mail gekopieerd",
+    contactHeadline: "Laten we samen iets bouwen.",
+    backToTop: "Terug naar boven",
+    startedCaption: "Ik op mijn 11e — rond de tijd dat ik verliefd werd op tech en mijn eerste regels code schreef.",
   },
   de: {
     // Navbar
@@ -249,9 +289,7 @@ export const translations = {
     introSubtitle: "iOS & macOS Entwickler / Full-Stack Entwickler",
     introDescription: "Ich baue Dinge für iOS, macOS und das Web — und ich liebe es, Technologie und Kreativität zu vermischen.",
     introBadge: "ENTWICKLER / SCHÖPFER",
-    introTaken: "Glücklich mit einem wunderschönen Mädchen namens Esmee 💕",
     getInTouch: "Kontakt aufnehmen",
-    resume: "Lebenslauf",
     
     // About
     aboutTitle: "Über Mich",
@@ -293,6 +331,18 @@ export const translations = {
     footerRights: "Alle Rechte vorbehalten.",
     footerAbout: "Über diese Seite",
     footerTech: "Erstellt mit React, Next.js, TypeScript, Tailwind CSS, Framer Motion und gehostet auf Vercel.",
+
+    // Redesign
+    statusAvailable: "Offen für neue Projekte",
+    basedIn: "Wohnhaft in Marrakesch, Marokko",
+    codingSince: "Programmiert seit 2021",
+    aboutLocation: "STANDORT",
+    aboutLocationText: "Marrakesch, Marokko",
+    copyEmail: "E-Mail kopieren",
+    emailCopied: "E-Mail kopiert",
+    contactHeadline: "Lass uns gemeinsam etwas bauen.",
+    backToTop: "Nach oben",
+    startedCaption: "Ich mit 11 — ungefähr als ich mich für Technik begeistert und meine ersten Zeilen Code geschrieben habe.",
   },
   es: {
     // Navbar
@@ -308,9 +358,7 @@ export const translations = {
     introSubtitle: "Desarrollador iOS y macOS / Full-Stack",
     introDescription: "Construyo cosas para iOS, macOS y la web — y me encanta mezclar tecnología con creatividad.",
     introBadge: "DESARROLLADOR / CREADOR",
-    introTaken: "Felizmente junto a una hermosa chica llamada Esmee 💕",
     getInTouch: "Ponte en contacto",
-    resume: "Currículum",
     
     // About
     aboutTitle: "Acerca de Mí",
@@ -352,6 +400,18 @@ export const translations = {
     footerRights: "Todos los derechos reservados.",
     footerAbout: "Acerca de este sitio",
     footerTech: "Creado con React, Next.js, TypeScript, Tailwind CSS, Framer Motion y alojado en Vercel.",
+
+    // Redesign
+    statusAvailable: "Abierto a nuevos proyectos",
+    basedIn: "Vivo en Marrakech, Marruecos",
+    codingSince: "Programando desde 2021",
+    aboutLocation: "UBICACIÓN",
+    aboutLocationText: "Marrakech, Marruecos",
+    copyEmail: "Copiar email",
+    emailCopied: "Email copiado",
+    contactHeadline: "Construyamos algo juntos.",
+    backToTop: "Volver arriba",
+    startedCaption: "Yo a los 11 — más o menos cuando me enamoré de la tecnología y escribí mis primeras líneas de código.",
   },
   ko: {
     // Navbar
@@ -367,9 +427,7 @@ export const translations = {
     introSubtitle: "iOS & macOS 개발자 / 풀스택 개발자",
     introDescription: "iOS, macOS, 웹을 위한 것들을 만들며 — 기술과 창의성을 섞는 것을 좋아합니다.",
     introBadge: "개발자 / 크리에이터",
-    introTaken: "아름다운 여자친구 Esmee와 행복합니다 💕",
     getInTouch: "연락하기",
-    resume: "이력서",
     
     // About
     aboutTitle: "소개",
@@ -411,5 +469,17 @@ export const translations = {
     footerRights: "모든 권리 보유.",
     footerAbout: "이 사이트에 대해",
     footerTech: "React, Next.js, TypeScript, Tailwind CSS, Framer Motion으로 제작되었으며 Vercel에서 호스팅됩니다.",
+
+    // Redesign
+    statusAvailable: "새 프로젝트 환영",
+    basedIn: "모로코 마라케시 거주",
+    codingSince: "2021년부터 코딩",
+    aboutLocation: "위치",
+    aboutLocationText: "모로코 마라케시",
+    copyEmail: "이메일 복사",
+    emailCopied: "이메일이 복사되었습니다",
+    contactHeadline: "함께 무언가를 만들어요.",
+    backToTop: "맨 위로",
+    startedCaption: "11살 때의 나 — 기술에 빠져 처음으로 코드를 작성하던 무렵.",
   },
 } as const;
