@@ -55,8 +55,6 @@ export default function LanguageSwitch() {
                   setLanguage(lang.code);
                   setIsOpen(false);
                 }}
-                data-umami-event="language-change"
-                data-umami-event-language={lang.code}
                 className={clsx(
                   "flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-start text-sm transition-colors",
                   language === lang.code ? "bg-white/10 text-white" : "text-zinc-300 hover:bg-white/5"

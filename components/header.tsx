@@ -89,7 +89,6 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => go("Contact")}
-            data-umami-event="nav-cta"
             className="btn-primary hidden !px-4 !py-2 md:inline-flex"
           >
             {t.getInTouch}

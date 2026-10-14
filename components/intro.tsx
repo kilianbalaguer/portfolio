@@ -93,7 +93,6 @@ export default function Intro() {
             <a
               href="#contact"
               className="btn-primary group"
-              data-umami-event="hero-contact"
               onClick={() => {
                 setActiveSection("Contact");
                 setTimeOfLastClick(Date.now());
@@ -106,7 +105,6 @@ export default function Intro() {
               href="https://github.com/kilianbalaguer"
               target="_blank"
               rel="noopener noreferrer"
-              data-umami-event="hero-github"
               className="btn-ghost"
             >
               <FaGithub className="text-base" /> GitHub

@@ -6,7 +6,6 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 import LanguageContextProvider from "@/context/language-context";
-import Analytics from "@/components/analytics";
 import { siteUrl } from "@/lib/site";
 
 const sans = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -99,7 +98,6 @@ export default function RootLayout({
           </ActiveSectionContextProvider>
         </LanguageContextProvider>
 
-        <Analytics />
       </body>
     </html>
   );

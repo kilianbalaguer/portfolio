@@ -29,7 +29,6 @@ export default function Contact() {
     const message = String(data.get("message") ?? "");
 
     const body = `From: ${name}\nEmail: ${email}\n\n${message}`;
-    window.umami?.track("contact-submit");
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(`Portfolio message from ${name}`)}&body=${encodeURIComponent(body)}`;
   };
 
@@ -37,7 +36,6 @@ export default function Contact() {
     try {
       await navigator.clipboard.writeText(EMAIL);
       toast.success(t.emailCopied);
-      window.umami?.track("email-copy");
     } catch {
       window.location.href = `mailto:${EMAIL}`;
     }
@@ -61,7 +59,6 @@ export default function Contact() {
             <div className="flex flex-wrap items-center gap-2">
               <a
                 href={`mailto:${EMAIL}`}
-                data-umami-event="email-click"
                 className="break-all text-lg text-white underline decoration-white/20 underline-offset-4 transition-colors hover:decoration-accent"
               >
                 {EMAIL}

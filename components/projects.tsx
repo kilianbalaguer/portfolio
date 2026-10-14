@@ -70,8 +70,6 @@ export default function Projects() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    data-umami-event="project-code"
-                    data-umami-event-project={project.id}
                     className="btn-ghost !py-2"
                   >
                     <FaGithub /> {t.sourceCode}
@@ -81,8 +79,6 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      data-umami-event="project-live"
-                      data-umami-event-project={project.id}
                       className="btn-primary !py-2"
                     >
                       {t.liveDemo} <BsArrowUpRight />
