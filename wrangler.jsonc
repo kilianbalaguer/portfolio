@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-10-01",
+  // Serve the static Next.js export (next build -> out/)
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
