@@ -1,3 +1,3 @@
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.kilianbalaguer.tech"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://kilianbalaguer.me"
 ).replace(/\/$/, "");
