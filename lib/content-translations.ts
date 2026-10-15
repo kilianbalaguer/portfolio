@@ -121,6 +121,18 @@ export const experienceTranslations = {
       description: "Age 16 — relocated to Marrakech, Morocco. Continuing to build apps and explore new opportunities.",
       date: "2026",
     },
+    {
+      title: "Voltaire",
+      location: "Marrakech, Morocco",
+      description: "Age 16 — started Voltaire, a local AI app for iPhone, iPad and Mac built with Swift and MLX that runs models fully on-device.",
+      date: "2026",
+    },
+    {
+      title: "Founded Avenor",
+      location: "Marrakech, Morocco",
+      description: "Age 16 — started my own company, Avenor (avenor.ma), a web studio in Marrakech building websites for businesses.",
+      date: "2026",
+    },
   ],
   fr: [
     {
@@ -169,6 +181,18 @@ export const experienceTranslations = {
       title: "Installation à Marrakech",
       location: "Marrakech, Maroc",
       description: "16 ans — installation à Marrakech, Maroc. Je continue à créer des apps et à explorer de nouvelles opportunités.",
+      date: "2026",
+    },
+    {
+      title: "Voltaire",
+      location: "Marrakech, Maroc",
+      description: "16 ans — j'ai lancé Voltaire, une app d'IA locale pour iPhone, iPad et Mac, créée avec Swift et MLX, qui fait tourner les modèles entièrement sur l'appareil.",
+      date: "2026",
+    },
+    {
+      title: "Création d'Avenor",
+      location: "Marrakech, Maroc",
+      description: "16 ans — j'ai créé ma propre entreprise, Avenor (avenor.ma), un studio web à Marrakech qui conçoit des sites pour les entreprises.",
       date: "2026",
     },
   ],
@@ -221,6 +245,18 @@ export const experienceTranslations = {
       description: "16 سنة — انتقلت إلى مراكش، المغرب. أستمر في بناء التطبيقات واستكشاف فرص جديدة.",
       date: "2026",
     },
+    {
+      title: "Voltaire",
+      location: "مراكش، المغرب",
+      description: "16 سنة — بدأت مشروع Voltaire، تطبيق ذكاء اصطناعي محلي لـ iPhone و iPad و Mac مبني بـ Swift و MLX ويشغّل النماذج بالكامل على الجهاز.",
+      date: "2026",
+    },
+    {
+      title: "تأسيس Avenor",
+      location: "مراكش، المغرب",
+      description: "16 سنة — أسست شركتي الخاصة Avenor ‏(avenor.ma)، استوديو ويب في مراكش يصمم مواقع للشركات.",
+      date: "2026",
+    },
   ],
   nl: [
     {
@@ -269,6 +305,18 @@ export const experienceTranslations = {
       title: "Verhuizing naar Marrakech",
       location: "Marrakech, Marokko",
       description: "16 jaar — verhuisd naar Marrakech, Marokko. Blijf apps bouwen en nieuwe kansen verkennen.",
+      date: "2026",
+    },
+    {
+      title: "Voltaire",
+      location: "Marrakech, Marokko",
+      description: "16 jaar — begonnen aan Voltaire, een lokale AI-app voor iPhone, iPad en Mac, gebouwd met Swift en MLX, die modellen volledig op het apparaat draait.",
+      date: "2026",
+    },
+    {
+      title: "Avenor opgericht",
+      location: "Marrakech, Marokko",
+      description: "16 jaar — mijn eigen bedrijf Avenor (avenor.ma) gestart, een webstudio in Marrakech die websites bouwt voor bedrijven.",
       date: "2026",
     },
   ],
@@ -321,6 +369,18 @@ export const experienceTranslations = {
       description: "16 Jahre — Umzug nach Marrakesch, Marokko. Entwickle weiterhin Apps und erkunde neue Möglichkeiten.",
       date: "2026",
     },
+    {
+      title: "Voltaire",
+      location: "Marrakesch, Marokko",
+      description: "16 Jahre — Voltaire gestartet, eine lokale KI-App für iPhone, iPad und Mac, gebaut mit Swift und MLX, die Modelle komplett auf dem Gerät ausführt.",
+      date: "2026",
+    },
+    {
+      title: "Avenor gegründet",
+      location: "Marrakesch, Marokko",
+      description: "16 Jahre — mein eigenes Unternehmen Avenor (avenor.ma) gegründet, ein Webstudio in Marrakesch, das Websites für Unternehmen baut.",
+      date: "2026",
+    },
   ],
   es: [
     {
@@ -371,6 +431,18 @@ export const experienceTranslations = {
       description: "16 años — mudanza a Marrakech, Marruecos. Continúo creando apps y explorando nuevas oportunidades.",
       date: "2026",
     },
+    {
+      title: "Voltaire",
+      location: "Marrakech, Marruecos",
+      description: "16 años — empecé Voltaire, una app de IA local para iPhone, iPad y Mac creada con Swift y MLX que ejecuta los modelos totalmente en el dispositivo.",
+      date: "2026",
+    },
+    {
+      title: "Fundé Avenor",
+      location: "Marrakech, Marruecos",
+      description: "16 años — fundé mi propia empresa, Avenor (avenor.ma), un estudio web en Marrakech que crea sitios web para negocios.",
+      date: "2026",
+    },
   ],
   ko: [
     {
@@ -419,6 +491,18 @@ export const experienceTranslations = {
       title: "마라케시로 이주",
       location: "마라케시, 모로코",
       description: "16살 — 모로코 마라케시로 이주했습니다. 앱을 계속 만들고 새로운 기회를 탐색하고 있습니다.",
+      date: "2026",
+    },
+    {
+      title: "Voltaire",
+      location: "마라케시, 모로코",
+      description: "16살 — Swift와 MLX로 만든 iPhone, iPad, Mac용 로컬 AI 앱 Voltaire를 시작했습니다. 모든 모델이 기기에서 직접 실행됩니다.",
+      date: "2026",
+    },
+    {
+      title: "Avenor 설립",
+      location: "마라케시, 모로코",
+      description: "16살 — 마라케시에서 기업을 위한 웹사이트를 만드는 웹 스튜디오인 제 회사 Avenor (avenor.ma)를 시작했습니다.",
       date: "2026",
     },
   ],
