@@ -9,7 +9,7 @@ import { HiOutlineClipboardDocument } from "react-icons/hi2";
 import toast from "react-hot-toast";
 import SectionHeading from "./section-heading";
 
-export const EMAIL = "kilianbalaguer4@icloud.com";
+export const EMAIL = "contact@kilianbalaguer.me";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
