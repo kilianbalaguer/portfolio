@@ -133,6 +133,12 @@ export const experienceTranslations = {
       description: "Age 16 — started my own company, Avenor (avenor.ma), a web studio in Marrakech building websites for businesses.",
       date: "2026",
     },
+    {
+      title: "Ovra Browser",
+      location: "Marrakech, Morocco",
+      description: "Age 16 — started Ovra, a fast browser for the Mac built with Swift and WebKit, with a tab sidebar, tracker blocking and custom themes. iPhone and iPad versions are next.",
+      date: "2026",
+    },
   ],
   fr: [
     {
@@ -193,6 +199,12 @@ export const experienceTranslations = {
       title: "Création d'Avenor",
       location: "Marrakech, Maroc",
       description: "16 ans — j'ai créé ma propre entreprise, Avenor (avenor.ma), un studio web à Marrakech qui conçoit des sites pour les entreprises.",
+      date: "2026",
+    },
+    {
+      title: "Ovra Browser",
+      location: "Marrakech, Maroc",
+      description: "16 ans — j'ai lancé Ovra, un navigateur rapide pour Mac créé avec Swift et WebKit, avec une barre latérale d'onglets, le blocage des traqueurs et des thèmes personnalisés. Les versions iPhone et iPad arrivent ensuite.",
       date: "2026",
     },
   ],
@@ -257,6 +269,12 @@ export const experienceTranslations = {
       description: "16 سنة — أسست شركتي الخاصة Avenor ‏(avenor.ma)، استوديو ويب في مراكش يصمم مواقع للشركات.",
       date: "2026",
     },
+    {
+      title: "Ovra Browser",
+      location: "مراكش، المغرب",
+      description: "16 سنة — بدأت Ovra، متصفح سريع للـ Mac مبني بـ Swift و WebKit، مع شريط جانبي للتبويبات وحظر أدوات التتبع وسمات مخصصة. نسخ iPhone و iPad هي الخطوة التالية.",
+      date: "2026",
+    },
   ],
   nl: [
     {
@@ -317,6 +335,12 @@ export const experienceTranslations = {
       title: "Avenor opgericht",
       location: "Marrakech, Marokko",
       description: "16 jaar — mijn eigen bedrijf Avenor (avenor.ma) gestart, een webstudio in Marrakech die websites bouwt voor bedrijven.",
+      date: "2026",
+    },
+    {
+      title: "Ovra Browser",
+      location: "Marrakech, Marokko",
+      description: "16 jaar — Ovra gestart, een snelle browser voor de Mac gebouwd met Swift en WebKit, met een tabbladzijbalk, trackerblokkering en eigen thema's. Versies voor iPhone en iPad volgen.",
       date: "2026",
     },
   ],
@@ -381,6 +405,12 @@ export const experienceTranslations = {
       description: "16 Jahre — mein eigenes Unternehmen Avenor (avenor.ma) gegründet, ein Webstudio in Marrakesch, das Websites für Unternehmen baut.",
       date: "2026",
     },
+    {
+      title: "Ovra Browser",
+      location: "Marrakesch, Marokko",
+      description: "16 Jahre — Ovra gestartet, ein schneller Browser für den Mac, gebaut mit Swift und WebKit, mit Tab-Seitenleiste, Tracker-Schutz und eigenen Themes. Versionen für iPhone und iPad folgen.",
+      date: "2026",
+    },
   ],
   es: [
     {
@@ -443,6 +473,12 @@ export const experienceTranslations = {
       description: "16 años — fundé mi propia empresa, Avenor (avenor.ma), un estudio web en Marrakech que crea sitios web para negocios.",
       date: "2026",
     },
+    {
+      title: "Ovra Browser",
+      location: "Marrakech, Marruecos",
+      description: "16 años — empecé Ovra, un navegador rápido para Mac creado con Swift y WebKit, con barra lateral de pestañas, bloqueo de rastreadores y temas personalizados. Las versiones para iPhone y iPad vienen después.",
+      date: "2026",
+    },
   ],
   ko: [
     {
@@ -503,6 +539,12 @@ export const experienceTranslations = {
       title: "Avenor 설립",
       location: "마라케시, 모로코",
       description: "16살 — 마라케시에서 기업을 위한 웹사이트를 만드는 웹 스튜디오인 제 회사 Avenor (avenor.ma)를 시작했습니다.",
+      date: "2026",
+    },
+    {
+      title: "Ovra Browser",
+      location: "마라케시, 모로코",
+      description: "16살 — Swift와 WebKit으로 만든 빠른 Mac 브라우저 Ovra를 시작했습니다. 탭 사이드바, 추적기 차단, 맞춤 테마를 지원하며 iPhone과 iPad 버전이 다음 차례입니다.",
       date: "2026",
     },
   ],

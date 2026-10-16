@@ -5,7 +5,7 @@ import { GrAndroid } from "react-icons/gr";
 import { SiMacos } from "react-icons/si";
 import { FaWindows } from "react-icons/fa";
 import { SiXcode } from "react-icons/si";
-import { FaPlane, FaRobot, FaBriefcase } from "react-icons/fa";
+import { FaPlane, FaRobot, FaBriefcase, FaGlobe } from "react-icons/fa";
 import ovraImg from "@/public/Ovra.png";
 import voltaireImg from "@/public/voltaire-screenshot.png";
 export const links = [
@@ -75,6 +75,10 @@ export const experiencesData = [
   {
     icon: React.createElement(FaBriefcase),
     index: 9,
+  },
+  {
+    icon: React.createElement(FaGlobe),
+    index: 10,
   },
 ] as const;
 
