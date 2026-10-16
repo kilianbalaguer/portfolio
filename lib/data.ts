@@ -6,7 +6,7 @@ import { SiMacos } from "react-icons/si";
 import { FaWindows } from "react-icons/fa";
 import { SiXcode } from "react-icons/si";
 import { FaPlane, FaRobot, FaBriefcase } from "react-icons/fa";
-import areobrowserImg from "@/public/AeroBrowser.png";
+import ovraImg from "@/public/Ovra.png";
 import voltaireImg from "@/public/voltaire-screenshot.png";
 export const links = [
   {
@@ -79,17 +79,17 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData: {
-  id: "aerobrowser" | "voltaire";
+  id: "ovra" | "voltaire";
   tags: string[];
   imageUrl: StaticImageData;
   githubUrl: string;
   liveUrl: string;
 }[] = [
   {
-    id: "aerobrowser",
-    tags: ["Swift", "SwiftUI", "macOS", "iOS"],
-    imageUrl: areobrowserImg,
-    githubUrl: "https://github.com/AeroBrowser-Official/AeroBrowser",
+    id: "ovra",
+    tags: ["Swift", "SwiftUI", "WebKit", "macOS"],
+    imageUrl: ovraImg,
+    githubUrl: "https://github.com/OvraBrowser/Ovra",
     liveUrl: "coming-soon",
   },
   {

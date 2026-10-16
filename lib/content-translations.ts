@@ -1,8 +1,8 @@
 export const projectTranslations = {
   en: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "A modern, fast, and privacy-focused browser for macOS, iOS, and iPadOS. Built with Swift and SwiftUI for optimal performance.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "A fast macOS browser built with Swift, SwiftUI and WebKit: a glass tab sidebar, built-in tracker blocking, custom themes you can share, and backups. iPhone and iPad versions with Ovra accounts are on the way."
     },
     voltaire: {
       title: "Voltaire",
@@ -10,9 +10,9 @@ export const projectTranslations = {
     },
   },
   fr: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "Un navigateur moderne, rapide et axé sur la confidentialité pour macOS, iOS et iPadOS. Construit avec Swift et SwiftUI pour des performances optimales.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "Un navigateur macOS rapide, créé avec Swift, SwiftUI et WebKit : barre latérale d'onglets en verre, blocage des traqueurs intégré, thèmes personnalisés à partager et sauvegardes. Des versions iPhone et iPad avec les comptes Ovra arrivent bientôt."
     },
     voltaire: {
       title: "Voltaire",
@@ -20,9 +20,9 @@ export const projectTranslations = {
     },
   },
   ar: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "متصفح حديث وسريع ويركز على الخصوصية لنظام macOS و iOS و iPadOS. تم بناؤه باستخدام Swift و SwiftUI للأداء الأمثل.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "متصفح سريع لنظام macOS مبني بـ Swift و SwiftUI و WebKit: شريط جانبي زجاجي للتبويبات، وحظر مدمج لأدوات التتبع، وسمات مخصصة يمكن مشاركتها، ونسخ احتياطية. نسخ iPhone و iPad مع حسابات Ovra قادمة قريبًا."
     },
     voltaire: {
       title: "Voltaire",
@@ -30,9 +30,9 @@ export const projectTranslations = {
     },
   },
   nl: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "Een moderne, snelle en privacy-gerichte browser voor macOS, iOS en iPadOS. Gebouwd met Swift en SwiftUI voor optimale prestaties.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "Een snelle macOS-browser gebouwd met Swift, SwiftUI en WebKit: een glazen tabbladzijbalk, ingebouwde trackerblokkering, eigen thema's die je kunt delen en back-ups. Versies voor iPhone en iPad met Ovra-accounts komen eraan."
     },
     voltaire: {
       title: "Voltaire",
@@ -40,9 +40,9 @@ export const projectTranslations = {
     },
   },
   de: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "Ein moderner, schneller und datenschutzorientierter Browser für macOS, iOS und iPadOS. Mit Swift und SwiftUI für optimale Leistung gebaut.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "Ein schneller macOS-Browser, gebaut mit Swift, SwiftUI und WebKit: eine Glas-Seitenleiste für Tabs, eingebauter Tracker-Schutz, eigene Themes zum Teilen und Backups. Versionen für iPhone und iPad mit Ovra-Konten sind in Arbeit."
     },
     voltaire: {
       title: "Voltaire",
@@ -50,9 +50,9 @@ export const projectTranslations = {
     },
   },
   es: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "Un navegador moderno, rápido y enfocado en la privacidad para macOS, iOS e iPadOS. Construido con Swift y SwiftUI para un rendimiento óptimo.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "Un navegador rápido para macOS creado con Swift, SwiftUI y WebKit: barra lateral de pestañas de cristal, bloqueo de rastreadores integrado, temas personalizados para compartir y copias de seguridad. Pronto llegarán versiones para iPhone y iPad con cuentas de Ovra."
     },
     voltaire: {
       title: "Voltaire",
@@ -60,9 +60,9 @@ export const projectTranslations = {
     },
   },
   ko: {
-    aerobrowser: {
-      title: "AeroBrowser",
-      description: "macOS, iOS 및 iPadOS를 위한 현대적이고 빠르며 개인정보 보호에 중점을 둔 브라우저입니다. 최적의 성능을 위해 Swift와 SwiftUI로 구축되었습니다.",
+    ovra: {
+      title: "Ovra Browser",
+      description: "Swift, SwiftUI, WebKit으로 만든 빠른 macOS 브라우저입니다. 유리 질감의 탭 사이드바, 내장 추적기 차단, 공유할 수 있는 맞춤 테마, 백업을 지원합니다. Ovra 계정을 지원하는 iPhone 및 iPad 버전도 준비 중입니다."
     },
     voltaire: {
       title: "Voltaire",
